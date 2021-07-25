@@ -25,7 +25,11 @@ Route::get('/', function () {
 Auth::routes(['register'=>false]);
 
 
-Route::get('logout', function () {
-    auth()->logout();
-    return view('welcome');
-})->name('logout-page');
+// Route::get('logout', function () {
+//     auth()->logout();
+//     return view('welcome');
+// })->name('logout-page');
+
+Route::get('test',function(){
+    return view('admin.index');
+});
