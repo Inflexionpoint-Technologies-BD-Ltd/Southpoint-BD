@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -24,12 +25,21 @@ Route::get('/', function () {
 
 Auth::routes(['register'=>false]);
 
+// --------------------------------- test routes -----------------------------------------
 
-// Route::get('logout', function () {
-//     auth()->logout();
-//     return view('welcome');
-// })->name('logout-page');
+// Route::get('test',function(){
+//     return view('admin.index');
+// });
 
-Route::get('test',function(){
-    return view('admin.index');
+
+// ---------------------------------------------------------------------- end - test routes
+
+
+// ------------------------------------ admin routes ---------------------------------------
+
+Route::middleware(['auth'])->group(function(){
+    Route::get('/admin-southpoint', [AdminController::class,'index']);
+    Route::get('/logging-out',[AdminController::class,'logoutAdmin'])->name('logging-out');
 });
+
+// ----------------------------------------------------------------------- end - admin routes

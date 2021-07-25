@@ -166,6 +166,19 @@
         <!-- Divider -->
         <hr class="sidebar-divider d-none d-md-block" />
 
+        {{-- --------------------------------- logout option ------------------------------------ --}}
+
+         <!-- Heading -->
+         <li class="nav-item">
+            <a class="nav-link" href={{ route("logging-out") }}>
+              <i class="fas fa-fw fa-cog"></i>
+              <span>Logout</span></a
+            >
+          </li>
+
+
+        {{-- --------------------------------------------------------------- end - logout option --}}
+
         <!-- Sidebar Toggler (Sidebar) -->
         <div class="text-center d-none d-md-inline">
           <button class="rounded-circle border-0" id="sidebarToggle"></button>
@@ -514,7 +527,7 @@
         <footer class="sticky-footer bg-white">
           <div class="container my-auto">
             <div class="copyright text-center my-auto">
-              <span>Copyright &copy; Your Website 2019</span>
+              {{-- <span>Copyright &copy; Your Website 2019</span> --}}
             </div>
           </div>
         </footer>
