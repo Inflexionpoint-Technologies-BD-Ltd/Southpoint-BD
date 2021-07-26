@@ -42,4 +42,6 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/logging-out',[AdminController::class,'logoutAdmin'])->name('logging-out');
 });
 
-// ----------------------------------------------------------------------- end - admin routes
+// ---------------------------------------------------------------------- end - admin routes
+
+
