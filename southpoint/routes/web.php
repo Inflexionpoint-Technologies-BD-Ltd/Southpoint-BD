@@ -18,12 +18,11 @@ use Illuminate\Support\Facades\Auth;
 // Route::get('/home', 'HomeController@index')->name('home');
 
 
-
 Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes(['register'=>false]);
+Auth::routes(['register' => false]);
 
 // --------------------------------- test routes -----------------------------------------
 
@@ -37,11 +36,20 @@ Auth::routes(['register'=>false]);
 
 // ------------------------------------ admin routes ---------------------------------------
 
-Route::middleware(['auth'])->group(function(){
-    Route::get('/admin-southpoint', [AdminController::class,'index']);
-    Route::get('/logging-out',[AdminController::class,'logoutAdmin'])->name('logging-out');
+Route::middleware(['auth'])->group(function () {
+    Route::get('/admin-southpoint', [AdminController::class, 'index']);
+    Route::get('/logging-out', [AdminController::class, 'logoutAdmin'])->name('logging-out');
+
+    // -------------------- trade page routes -----------------------------
+    Route::resource('/trades','TradeController');
+    // -------------------------------------------- end - trade page routes
+
 });
 
 // ---------------------------------------------------------------------- end - admin routes
 
 
+// -------------------------------------- test routes --------------------------------------
+
+
+// ---------------------------------------------------------------------- end - test routes

@@ -82,6 +82,47 @@
 
   {{-- ------------------------------------------------------------------ end - About us page elements --}}
 
+
+  {{-- ------------------------------------------ trades slider -------------------------------------------- --}}
+
+         <!-- Divider -->
+    <hr class="sidebar-divider" />
+
+     <!-- Heading -->
+        <div class="sidebar-heading">Trades</div>
+
+        {{-- ----------------------- Home - slider item ----------------------- --}}
+
+        <!-- Nav Item - Pages Collapse Menu -->
+        <li class="nav-item">
+            <a
+            class="nav-link collapsed"
+            href="#"
+            data-toggle="collapse"
+            data-target="#collapseTradeSlider"
+            aria-expanded="true"
+            aria-controls="collapseTradeSlider"
+            >
+            <i class="fas fa-fw fa-cog"></i>
+            <span>Slider</span>
+            </a>
+            <div
+            id="collapseTradeSlider"
+            class="collapse"
+            aria-labelledby="headingTwo"
+            data-parent="#accordionSidebar"
+            >
+            <div class="bg-white py-2 collapse-inner rounded">
+                {{-- <h6 class="collapse-header">Custom Components:</h6> --}}
+                <a class="collapse-item" href="cards.html">Add slider</a>
+                <a class="collapse-item" href="buttons.html">View all sliders</a>
+            </div>
+            </div>
+        </li>
+
+   {{-- --------------------------------------------------------------------------------- end - trades slider --}}
+
+
    {{-- ------------------------------------------- logout option --------------------------------------------- --}}
 
             <!-- Divider -->
@@ -122,3 +163,6 @@
 
 
           {{-- --------------------------------------------------------------------------------- end - logout option --}}
+
+
+
