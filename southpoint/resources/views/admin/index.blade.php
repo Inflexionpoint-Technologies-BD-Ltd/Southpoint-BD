@@ -23,6 +23,12 @@
       rel="stylesheet"
     />
 
+    {{-- ------------------------------------- adding bootstrap css ---------------------------------------------- --}}
+
+    <link rel="stylesheet" href={{ asset('css/style.css') }}>
+
+    {{--------------------------------------------------------------------------------- end - adding bootstrap css --}}
+
     <!-- Custom styles for this template-->
     <link href={{ asset("css/sb-admin-2.min.css") }} rel="stylesheet" />
   </head>
@@ -64,23 +70,6 @@
         {{-- ------------------------------ adding components ----------------------------------- --}}
         <x-admin-sidebar></x-admin-sidebar>
         {{-- ------------------------------------------------------------ end - adding components --}}
-
-
-        <!-- Divider -->
-        <hr class="sidebar-divider" />
-
-        {{-- --------------------------------- logout option ------------------------------------ --}}
-
-         <!-- Heading -->
-         <li class="nav-item">
-            <a class="nav-link" href={{ route("logging-out") }}>
-              <i class="fas fa-fw fa-cog"></i>
-              <span>Logout</span></a
-            >
-          </li>
-
-
-        {{-- --------------------------------------------------------------- end - logout option --}}
 
         <!-- Sidebar Toggler (Sidebar) -->
         <div class="text-center d-none d-md-inline">
@@ -490,6 +479,7 @@
       </div>
     </div>
 
+
     <!-- Bootstrap core JavaScript-->
     <script src={{ asset("vendor/jquery/jquery.min.js") }}></script>
     <script src={{ asset("vendor/bootstrap/js/bootstrap.bundle.min.js") }}></script>
@@ -499,5 +489,6 @@
 
     <!-- Custom scripts for all pages-->
     <script src={{ asset("js/sb-admin-2.min.js") }}></script>
+
   </body>
 </html>
