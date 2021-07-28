@@ -21,9 +21,10 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/admin-southpoint', [AdminController::class, 'index']);
     Route::get('/logging-out', [AdminController::class, 'logoutAdmin'])->name('logging-out');
 
-    // ------------------------------ trade page routes --------------------------------------------
-    Route::resource('/trades', 'TradeController');
-    // ---------------------------------------------------------------------- end - trade page routes
+    // ----------------------------------------------- trade page routes --------------------------------------------
+    Route::resource('/trades', 'TradeController'); // trade page images
+    Route::resource('/trainings','TrainingController'); // training info of trades page
+    // --------------------------------------------------------------------------------------- end - trade page routes
 
 });
 

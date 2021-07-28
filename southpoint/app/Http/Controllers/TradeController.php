@@ -47,7 +47,7 @@ class TradeController extends Controller
         }
 
         Trade::create($inputs);
-
+        return redirect()->back();
     }
 
     /**

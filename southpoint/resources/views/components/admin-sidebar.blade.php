@@ -77,10 +77,10 @@
 {{-- ---------------------------------------- end - About us item  --}}
 
 
-{{-- ------------------------------------------------------------------ end - About us page elements --}}
+{{-- ------------------------------------------------------------------------ end - About us page elements --}}
 
 
-{{-- ------------------------------------------ trades slider -------------------------------------------- --}}
+{{-- ------------------------------------------ Trade page -------------------------------------------- --}}
 
 <!-- Divider -->
 <hr class="sidebar-divider"/>
@@ -117,7 +117,41 @@
     </div>
 </li>
 
-{{-- ------------------------------------------------------- end - trades slider --}}
+{{-- ------------------------------------------------------- end - trades slider item --}}
+
+{{-- ---------------------------- Training activities ------------------------------- --}}
+
+<!-- Nav Item - Pages Collapse Menu -->
+<li class="nav-item">
+    <a
+        class="nav-link collapsed"
+        href="#"
+        data-toggle="collapse"
+        data-target="#collapseTrainingActivities"
+        aria-expanded="true"
+        aria-controls="collapseTrainingActivities"
+    >
+        <i class="fas fa-fw fa-cog"></i>
+        <span>Training Activities</span>
+    </a>
+    <div
+        id="collapseTrainingActivities"
+        class="collapse"
+        aria-labelledby="headingTwo"
+        data-parent="#accordionSidebar"
+    >
+        <div class="bg-white py-2 collapse-inner rounded">
+            {{-- <h6 class="collapse-header">Custom Components:</h6> --}}
+            <a class="collapse-item" href="{{ route('trainings.create') }}">Add training activities</a>
+            <a class="collapse-item" href="{{ route('trainings.index') }}">View all training activities</a>
+        </div>
+    </div>
+</li>
+
+{{-- ------------------------------------------------------ end - training activities --}}
+
+
+{{-- --------------------------------------------------------------------------------------- end - trade page  --}}
 
 
 {{-- ------------------------------------------- logout option --------------------------------------------- --}}

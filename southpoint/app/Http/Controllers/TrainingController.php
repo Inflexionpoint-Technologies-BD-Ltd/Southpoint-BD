@@ -14,7 +14,8 @@ class TrainingController extends Controller
      */
     public function index()
     {
-        //
+        $training_activities = Training::all();
+        return view('admin.trade.training.index',compact('training_activities'));
     }
 
     /**
@@ -24,7 +25,7 @@ class TrainingController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.trade.training.create');
     }
 
     /**
@@ -35,7 +36,13 @@ class TrainingController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $inputs = \request()->validate([
+            'title' => 'required',
+            'content' => 'required',
+        ]);
+
+        Training::create($inputs);
+        return redirect()->back();
     }
 
     /**
@@ -55,9 +62,10 @@ class TrainingController extends Controller
      * @param  \App\Training  $training
      * @return \Illuminate\Http\Response
      */
-    public function edit(Training $training)
+    public function edit($id)
     {
-        //
+        $training_info = Training::find($id);
+        return view('admin.trade.training.edit',compact('training_info'));
     }
 
     /**
@@ -67,9 +75,18 @@ class TrainingController extends Controller
      * @param  \App\Training  $training
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Training $training)
+    public function update(Request $request, $id)
     {
-        //
+        $training = Training::find($id);
+
+        $inputs = \request()->validate([
+            'title' => 'required',
+            'content' => 'required'
+        ]);
+
+        $training->update($inputs);
+        session()->flash('update','Content updated successfully');
+        return redirect()->route('trainings.index');
     }
 
     /**
@@ -80,6 +97,8 @@ class TrainingController extends Controller
      */
     public function destroy(Training $training)
     {
-        //
+        $training->delete();
+        session()->flash('delete','Content deleted successfully');
+        return redirect()->back();
     }
 }
