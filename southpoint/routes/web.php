@@ -4,17 +4,6 @@ use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
 // Route::get('/home', 'HomeController@index')->name('home');
 
 
@@ -24,32 +13,24 @@ Route::get('/', function () {
 
 Auth::routes(['register' => false]);
 
-// --------------------------------- test routes -----------------------------------------
-
-// Route::get('test',function(){
-//     return view('admin.index');
-// });
 
 
-// ---------------------------------------------------------------------- end - test routes
-
-
-// ------------------------------------ admin routes ---------------------------------------
+// ---------------------------------------------------- admin routes --------------------------------------------------------------
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/admin-southpoint', [AdminController::class, 'index']);
     Route::get('/logging-out', [AdminController::class, 'logoutAdmin'])->name('logging-out');
 
-    // -------------------- trade page routes -----------------------------
-    Route::resource('/trades','TradeController');
-    // -------------------------------------------- end - trade page routes
+    // ------------------------------ trade page routes --------------------------------------------
+    Route::resource('/trades', 'TradeController');
+    // ---------------------------------------------------------------------- end - trade page routes
 
 });
 
-// ---------------------------------------------------------------------- end - admin routes
+// -------------------------------------------------------------------------------------------------------------- end - admin routes
 
 
-// -------------------------------------- test routes --------------------------------------
+// ---------------------------------------------------------- test routes -----------------------------------------------------------
 
 
-// ---------------------------------------------------------------------- end - test routes
+// ---------------------------------------------------------------------------------------------------------------- end - test routes
