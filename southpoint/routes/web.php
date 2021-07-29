@@ -14,8 +14,7 @@ Route::get('/', function () {
 Auth::routes(['register' => false]);
 
 
-
-// ---------------------------------------------------- admin routes --------------------------------------------------------------
+// -------------------------------------------------------- admin routes --------------------------------------------------------------
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/admin-southpoint', [AdminController::class, 'index']);
@@ -23,12 +22,18 @@ Route::middleware(['auth'])->group(function () {
 
     // ----------------------------------------------- trade page routes --------------------------------------------
     Route::resource('/trades', 'TradeController'); // trade page images
-    Route::resource('/trainings','TrainingController'); // training info of trades page
+    Route::resource('/trainings', 'TrainingController'); // training info of trades page
     // --------------------------------------------------------------------------------------- end - trade page routes
+
+    //----------------------------------------------- about page routes ----------------------------------------------
+    Route::resource('/about','AboutController'); // about information of about page
+    Route::resource('/message','MessageController'); // director's message
+    Route::resource('/profile','ProfileController'); //company profile from about us page
+    //---------------------------------------------------------------------------------------- end - about page routes
 
 });
 
-// -------------------------------------------------------------------------------------------------------------- end - admin routes
+// ------------------------------------------------------------------------------------------------------------------- end - admin routes
 
 
 // ---------------------------------------------------------- test routes -----------------------------------------------------------

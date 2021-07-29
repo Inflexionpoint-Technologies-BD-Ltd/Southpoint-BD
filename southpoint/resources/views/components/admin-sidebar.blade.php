@@ -69,12 +69,75 @@
     >
         <div class="bg-white py-2 collapse-inner rounded">
             {{-- <h6 class="collapse-header">Custom Components:</h6> --}}
-            <a class="collapse-item" href="cards.html">About page information</a>
+            <a class="collapse-item" href="{{route('about.create')}}">Add about page info</a>
+            <a class="collapse-item" href="{{route('about.index')}}">View all info</a>
         </div>
     </div>
 </li>
 
-{{-- ---------------------------------------- end - About us item  --}}
+{{-- ------------------------------------------ end - About us item  --}}
+
+{{-- -----------------------  Directors message item ----------------------- --}}
+
+<!-- Nav Item - Pages Collapse Menu -->
+<li class="nav-item">
+    <a
+        class="nav-link collapsed"
+        href="#"
+        data-toggle="collapse"
+        data-target="#collapseMessage"
+        aria-expanded="true"
+        aria-controls="collapseMessage"
+    >
+        <i class="fas fa-fw fa-cog"></i>
+        <span>Director's Message</span>
+    </a>
+    <div
+        id="collapseMessage"
+        class="collapse"
+        aria-labelledby="headingTwo"
+        data-parent="#accordionSidebar"
+    >
+        <div class="bg-white py-2 collapse-inner rounded">
+            {{-- <h6 class="collapse-header">Custom Components:</h6> --}}
+            <a class="collapse-item" href="{{route('message.create')}}">Add directors message</a>
+            <a class="collapse-item" href="{{route('message.index')}}">View all </a>
+        </div>
+    </div>
+</li>
+
+{{-- ----------------------------------------- end - Directors message item  --}}
+
+{{-- -----------------------  company profile item ----------------------- --}}
+
+<!-- Nav Item - Pages Collapse Menu -->
+<li class="nav-item">
+    <a
+        class="nav-link collapsed"
+        href="#"
+        data-toggle="collapse"
+        data-target="#collapseProfile"
+        aria-expanded="true"
+        aria-controls="collapseProfile"
+    >
+        <i class="fas fa-fw fa-cog"></i>
+        <span>Company Profile</span>
+    </a>
+    <div
+        id="collapseProfile"
+        class="collapse"
+        aria-labelledby="headingTwo"
+        data-parent="#accordionSidebar"
+    >
+        <div class="bg-white py-2 collapse-inner rounded">
+            {{-- <h6 class="collapse-header">Custom Components:</h6> --}}
+            <a class="collapse-item" href="{{route('profile.create')}}">Add company profile</a>
+            <a class="collapse-item" href="{{route('profile.index')}}">View all profiles</a>
+        </div>
+    </div>
+</li>
+
+{{-- ----------------------------------------- end - company profile item  --}}
 
 
 {{-- ------------------------------------------------------------------------ end - About us page elements --}}
