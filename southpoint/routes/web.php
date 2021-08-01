@@ -29,7 +29,13 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('/about','AboutController'); // about information of about page
     Route::resource('/message','MessageController'); // director's message
     Route::resource('/profile','ProfileController'); //company profile from about us page
+    Route::resource('/client','ClientController'); // company clients list
     //---------------------------------------------------------------------------------------- end - about page routes
+
+    // ---------------------------------------------- Infrastructure page routes -------------------------------------
+    Route::resource('/infrastructure','InfrastructureController'); // Infrastructure information with title and content
+    Route::resource('/infrastructure-images','InfrastructureImageController'); // Infrastructure slider content
+    // ------------------------------------------------------------------------------- end - Infrastructure page routes
 
 });
 

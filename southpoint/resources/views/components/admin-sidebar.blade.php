@@ -139,6 +139,38 @@
 
 {{-- ----------------------------------------- end - company profile item  --}}
 
+{{-- -----------------------  company profile item ----------------------- --}}
+
+<!-- Nav Item - Pages Collapse Menu -->
+<li class="nav-item">
+    <a
+        class="nav-link collapsed"
+        href="#"
+        data-toggle="collapse"
+        data-target="#collapseClient"
+        aria-expanded="true"
+        aria-controls="collapseClient"
+    >
+        <i class="fas fa-fw fa-cog"></i>
+        <span>Clients List</span>
+    </a>
+    <div
+        id="collapseClient"
+        class="collapse"
+        aria-labelledby="headingTwo"
+        data-parent="#accordionSidebar"
+    >
+        <div class="bg-white py-2 collapse-inner rounded">
+            {{-- <h6 class="collapse-header">Custom Components:</h6> --}}
+            <a class="collapse-item" href="{{route('client.create')}}">Add clients info</a>
+            <a class="collapse-item" href="{{route('client.index')}}">View all info</a>
+        </div>
+    </div>
+</li>
+
+{{-- ----------------------------------------- end - company profile item  --}}
+
+
 
 {{-- ------------------------------------------------------------------------ end - About us page elements --}}
 
@@ -215,6 +247,79 @@
 
 
 {{-- --------------------------------------------------------------------------------------- end - trade page  --}}
+
+
+{{-- ----------------------------------- Infrastructure elements -------------------------------------------------- --}}
+
+<!-- Divider -->
+<hr class="sidebar-divider"/>
+
+<!-- Heading -->
+<div class="sidebar-heading">Infrastructure</div>
+
+{{-- ----------------------- Infrastructure - title item ----------------------- --}}
+
+<!-- Nav Item - Pages Collapse Menu -->
+<li class="nav-item">
+    <a
+        class="nav-link collapsed"
+        href="#"
+        data-toggle="collapse"
+        data-target="#collapseInfrastructure"
+        aria-expanded="true"
+        aria-controls="collapseInfrastructure"
+    >
+        <i class="fas fa-fw fa-cog"></i>
+        <span>Infrastructure</span>
+    </a>
+    <div
+        id="collapseInfrastructure"
+        class="collapse"
+        aria-labelledby="headingTwo"
+        data-parent="#accordionSidebar"
+    >
+        <div class="bg-white py-2 collapse-inner rounded">
+            {{-- <h6 class="collapse-header">Custom Components:</h6> --}}
+            <a class="collapse-item" href="{{ route('infrastructure.create') }}">Add Infrastructure</a>
+            <a class="collapse-item" href="{{ route('infrastructure.index') }}">View all info</a>
+        </div>
+    </div>
+</li>
+
+{{-- ---------------------------------------- end - Infrastructure - title item  --}}
+
+{{-- ----------------------- Infrastructure - image slider item ----------------------- --}}
+
+<!-- Nav Item - Pages Collapse Menu -->
+<li class="nav-item">
+    <a
+        class="nav-link collapsed"
+        href="#"
+        data-toggle="collapse"
+        data-target="#collapseInfrastructureSlide"
+        aria-expanded="true"
+        aria-controls="collapseInfrastructureSlide"
+    >
+        <i class="fas fa-fw fa-cog"></i>
+        <span>Image slider</span>
+    </a>
+    <div
+        id="collapseInfrastructureSlide"
+        class="collapse"
+        aria-labelledby="headingTwo"
+        data-parent="#accordionSidebar"
+    >
+        <div class="bg-white py-2 collapse-inner rounded">
+            {{-- <h6 class="collapse-header">Custom Components:</h6> --}}
+            <a class="collapse-item" href="{{ route('infrastructure-images.create') }}">Add info</a>
+            <a class="collapse-item" href="{{ route('infrastructure-images.index') }}">View all info</a>
+        </div>
+    </div>
+</li>
+
+{{-- ---------------------------------------- end - Infrastructure - image slider item  --}}
+
+{{-- ----------------------------------- end - Infrastructure Page elements ------------------------------------------ --}}
 
 
 {{-- ------------------------------------------- logout option --------------------------------------------- --}}
