@@ -26,16 +26,49 @@
     >
         <div class="bg-white py-2 collapse-inner rounded">
             {{-- <h6 class="collapse-header">Custom Components:</h6> --}}
-            <a class="collapse-item" href="cards.html">Add slider information</a>
-            <a class="collapse-item" href="buttons.html">View all sliders</a>
+            <a class="collapse-item" href="{{ route('slider.create') }}">Add slider information</a>
+            <a class="collapse-item" href="{{ route('slider.index') }}">View all sliders</a>
         </div>
     </div>
 </li>
 
 {{-- ---------------------------------------- end - Home - slider item  --}}
 
+{{-- ------------------- Home - content item ----------------------- --}}
+
+<!-- Nav Item - Pages Collapse Menu -->
+<li class="nav-item">
+    <a
+        class="nav-link collapsed"
+        href="#"
+        data-toggle="collapse"
+        data-target="#collapseContent"
+        aria-expanded="true"
+        aria-controls="collapseContent"
+    >
+        <i class="fas fa-fw fa-cog"></i>
+        <span>Content</span>
+    </a>
+    <div
+        id="collapseContent"
+        class="collapse"
+        aria-labelledby="headingTwo"
+        data-parent="#accordionSidebar"
+    >
+        <div class="bg-white py-2 collapse-inner rounded">
+            {{-- <h6 class="collapse-header">Custom Components:</h6> --}}
+            <a class="collapse-item" href="{{ route('content.create') }}">Add content</a>
+            <a class="collapse-item" href="{{ route('content.index') }}">View all content</a>
+        </div>
+    </div>
+</li>
+
+{{-- ---------------------------------------- end - Home - content item  --}}
+
 
 {{-- ------------------------------------------------------------------ end - Home Page elements --}}
+
+
 
 
 {{-- ---------------------------------- About us page elements --------------------------------------- --}}
@@ -321,6 +354,90 @@
 
 {{-- ----------------------------------- end - Infrastructure Page elements ------------------------------------------ --}}
 
+{{-- ----------------------------------------- contact Page elements ---------------------------------------------------- --}}
+
+<!-- Divider -->
+<hr class="sidebar-divider"/>
+
+<!-- Heading -->
+<div class="sidebar-heading">Contact</div>
+
+{{-- ----------------------- contact info item ----------------------- --}}
+
+<!-- Nav Item - Pages Collapse Menu -->
+<li class="nav-item">
+    <a
+        class="nav-link collapsed"
+        href="#"
+        data-toggle="collapse"
+        data-target="#collapseInfo"
+        aria-expanded="true"
+        aria-controls="collapseInfo"
+    >
+        <i class="fas fa-fw fa-cog"></i>
+        <span>Contact information</span>
+    </a>
+    <div
+        id="collapseInfo"
+        class="collapse"
+        aria-labelledby="headingTwo"
+        data-parent="#accordionSidebar"
+    >
+        <div class="bg-white py-2 collapse-inner rounded">
+            {{-- <h6 class="collapse-header">Custom Components:</h6> --}}
+            <a class="collapse-item" href="{{ route('contact.create') }}">Add contact info</a>
+            <a class="collapse-item" href="{{ route('contact.index') }}">View all info</a>
+        </div>
+    </div>
+</li>
+
+{{-- ---------------------------------------- end - contact info item  --}}
+
+
+{{-- ---------------------------------------------------------------------------------------- end - contact Page elements --}}
+
+
+{{-- -------------------------------- Footer page elements ------------------------------------- --}}
+
+<!-- Divider -->
+<hr class="sidebar-divider"/>
+
+<!-- Heading -->
+<div class="sidebar-heading">Footer</div>
+
+{{-- ----------------------- footer item ----------------------- --}}
+
+<!-- Nav Item - Pages Collapse Menu -->
+<li class="nav-item">
+    <a
+        class="nav-link collapsed"
+        href="#"
+        data-toggle="collapse"
+        data-target="#collapseFooter"
+        aria-expanded="true"
+        aria-controls="collapseFooter"
+    >
+        <i class="fas fa-fw fa-cog"></i>
+        <span>Footer</span>
+    </a>
+    <div
+        id="collapseFooter"
+        class="collapse"
+        aria-labelledby="headingTwo"
+        data-parent="#accordionSidebar"
+    >
+        <div class="bg-white py-2 collapse-inner rounded">
+            {{-- <h6 class="collapse-header">Custom Components:</h6> --}}
+            <a class="collapse-item" href="{{ route('footer.create') }}">Add footer item</a>
+            <a class="collapse-item" href="{{ route('footer.index') }}">View all items</a>
+        </div>
+    </div>
+</li>
+
+{{-- ---------------------------------------- end footer item  --}}
+
+
+{{-- ------------------------------------------------------------------ end - Footer Page elements --}}
 
 {{-- ------------------------------------------- logout option --------------------------------------------- --}}
 

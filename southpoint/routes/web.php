@@ -20,6 +20,13 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/admin-southpoint', [AdminController::class, 'index']);
     Route::get('/logging-out', [AdminController::class, 'logoutAdmin'])->name('logging-out');
 
+    //------------------------------------------------ home page routes ---------------------------------------------
+
+    Route::resource('/slider','SliderController'); // sliders of home page
+    Route::resource('/content','HomeContentController'); // home page content
+
+    //----------------------------------------------------------------------------------------- end - home page routes
+
     // ----------------------------------------------- trade page routes --------------------------------------------
     Route::resource('/trades', 'TradeController'); // trade page images
     Route::resource('/trainings', 'TrainingController'); // training info of trades page
@@ -36,6 +43,16 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('/infrastructure','InfrastructureController'); // Infrastructure information with title and content
     Route::resource('/infrastructure-images','InfrastructureImageController'); // Infrastructure slider content
     // ------------------------------------------------------------------------------- end - Infrastructure page routes
+
+    // ------------------------------------------- contact us page routes --------------------------------------------
+    Route::resource('/contact','ContactController'); // contact info of contact page
+    // --------------------------------------------------------------------------------- end -  contact us page routes
+
+    //-------------------------------------------- footer page routes ------------------------------------------------
+
+    Route::resource('footer',FooterController::class);
+
+    //---------------------------------------------------------------------------------------- end - footer page routes
 
 });
 
