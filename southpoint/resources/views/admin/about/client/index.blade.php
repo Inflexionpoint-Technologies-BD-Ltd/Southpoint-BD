@@ -19,7 +19,7 @@
 
         @foreach($client_list as $client)
             <tr>
-                <td>{{ $id + 1 }}</td>
+                <td>{{ $id += 1 }}</td>
                 <td>{{ $client->title }}</td>
                 <td>{{ $client->content }}</td>
                 <td>{{ $client->created_at->format('M d Y') }}</td>

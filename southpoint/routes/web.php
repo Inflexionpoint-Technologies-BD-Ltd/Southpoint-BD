@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\MainController;
 
 // Route::get('/home', 'HomeController@index')->name('home');
 
@@ -22,8 +23,8 @@ Route::middleware(['auth'])->group(function () {
 
     //------------------------------------------------ home page routes ---------------------------------------------
 
-    Route::resource('/slider','SliderController'); // sliders of home page
-    Route::resource('/content','HomeContentController'); // home page content
+    Route::resource('/slider', 'SliderController'); // sliders of home page
+    Route::resource('/content', 'HomeContentController'); // home page content
 
     //----------------------------------------------------------------------------------------- end - home page routes
 
@@ -33,24 +34,24 @@ Route::middleware(['auth'])->group(function () {
     // --------------------------------------------------------------------------------------- end - trade page routes
 
     //----------------------------------------------- about page routes ----------------------------------------------
-    Route::resource('/about','AboutController'); // about information of about page
-    Route::resource('/message','MessageController'); // director's message
-    Route::resource('/profile','ProfileController'); //company profile from about us page
-    Route::resource('/client','ClientController'); // company clients list
+    Route::resource('/about', 'AboutController'); // about information of about page
+    Route::resource('/message', 'MessageController'); // director's message
+    Route::resource('/profile', 'ProfileController'); //company profile from about us page
+    Route::resource('/client', 'ClientController'); // company clients list
     //---------------------------------------------------------------------------------------- end - about page routes
 
     // ---------------------------------------------- Infrastructure page routes -------------------------------------
-    Route::resource('/infrastructure','InfrastructureController'); // Infrastructure information with title and content
-    Route::resource('/infrastructure-images','InfrastructureImageController'); // Infrastructure slider content
+    Route::resource('/infrastructure', 'InfrastructureController'); // Infrastructure information with title and content
+    Route::resource('/infrastructure-images', 'InfrastructureImageController'); // Infrastructure slider content
     // ------------------------------------------------------------------------------- end - Infrastructure page routes
 
     // ------------------------------------------- contact us page routes --------------------------------------------
-    Route::resource('/contact','ContactController'); // contact info of contact page
+    Route::resource('/contact', 'ContactController'); // contact info of contact page
     // --------------------------------------------------------------------------------- end -  contact us page routes
 
     //-------------------------------------------- footer page routes ------------------------------------------------
 
-    Route::resource('footer',FooterController::class);
+    Route::resource('footer', FooterController::class);
 
     //---------------------------------------------------------------------------------------- end - footer page routes
 
@@ -59,7 +60,22 @@ Route::middleware(['auth'])->group(function () {
 // ------------------------------------------------------------------------------------------------------------------- end - admin routes
 
 
+// ------------------------------------------------------------------ public routes -----------------------------------------------------
+
+// ------------------------------------------- trades page -------------------------------------
+
+Route::get('/pages/trades',[MainController::class,'trades'])->name('page.trades');
+
+// ---------------------------------------------------------------------------- end - trades page
+
+
+// ------------------------------------------------------------------------------------------------------------------- end - public routes
+
+
 // ---------------------------------------------------------- test routes -----------------------------------------------------------
 
+Route::get('test', function () {
+    return view('main.trades');
+});
 
 // ---------------------------------------------------------------------------------------------------------------- end - test routes

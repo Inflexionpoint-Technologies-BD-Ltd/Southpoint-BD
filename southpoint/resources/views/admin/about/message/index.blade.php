@@ -20,7 +20,7 @@
         <?php $id = 0 ?>
         @foreach($directors_messages as $message)
             <tr>
-                <td>{{ $id + 1 }}</td>
+                <td>{{ $id += 1 }}</td>
                 <td>{{ $message->name }}</td>
                 <td><img src="storage/{{ $message->image }}" alt="" style="width: 80px; height: 80px"></td>
                 <td>{{ $message->position }}</td>

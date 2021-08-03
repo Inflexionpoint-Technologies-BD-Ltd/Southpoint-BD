@@ -19,7 +19,7 @@
 
         @foreach($infrastructures as $infrastructure)
             <tr>
-                <td>{{ $id + 1 }}</td>
+                <td>{{ $id += 1 }}</td>
                 <td>{{ $infrastructure->title }}</td>
                 <td>{{ $infrastructure->content }}</td>
                 <td>{{ $infrastructure->created_at->format('M d Y') }}</td>

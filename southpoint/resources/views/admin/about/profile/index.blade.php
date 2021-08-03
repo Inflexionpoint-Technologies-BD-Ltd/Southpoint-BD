@@ -19,7 +19,7 @@
 
         @foreach($company_profile as $profile)
             <tr>
-                <td>{{ $id + 1 }}</td>
+                <td>{{ $id += 1 }}</td>
                 <td>{{ $profile->title }}</td>
                 <td>{{ $profile->content }}</td>
                 <td>{{ $profile->created_at->format('M d Y') }}</td>

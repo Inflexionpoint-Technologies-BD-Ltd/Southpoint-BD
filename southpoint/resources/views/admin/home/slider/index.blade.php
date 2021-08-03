@@ -18,7 +18,7 @@
         <?php $id = 0 ?>
         @foreach($sliders as $slider)
             <tr>
-                <td>{{ $id + 1 }}</td>
+                <td>{{ $id += 1 }}</td>
                 <td>{{ $slider->content }}</td>
                 <td><img src="storage/{{ $slider->image }}" alt="" style="width: 80px; height: 80px"></td>
                 <td>{{ $slider->created_at->format('M d Y')}}</td>

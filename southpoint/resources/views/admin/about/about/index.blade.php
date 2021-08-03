@@ -31,7 +31,7 @@
         <?php $id = 0 ?>
         @foreach($about_info as $about)
             <tr>
-                <td>{{ $id + 1 }}</td>
+                <td>{{ $id += 1 }}</td>
                 <td>{{ $about->title }}</td>
                 <td>{{ $about->content }}</td>
                 <td><img src="storage/{{ $about->image }}" alt="" style="width: 80px; height: 80px"></td>

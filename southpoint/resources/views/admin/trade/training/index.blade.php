@@ -31,11 +31,11 @@
 
         @foreach($training_activities as $training)
             <tr>
-                <td>{{ $id + 1 }}</td>
+                <td>{{ $id += 1 }}</td>
                 <td>{{ $training->title }}</td>
                 <td>{{ \Illuminate\Support\Str::limit($training->content,20)  }}</td>
-                <td>{{ $training->created_at->format('M d Y - h:i') }}</td>
-                <td>{{ $training->updated_at->format('M d Y - h:i') }}</td>
+                <td>{{ $training->created_at->format('M d Y') }}</td>
+                <td>{{ $training->updated_at->format('M d Y') }}</td>
                 <td>
                     <a href="{{ route('trainings.edit',$training->id) }}">
                         <button type="button" class="btn btn-outline-primary">Update</button>

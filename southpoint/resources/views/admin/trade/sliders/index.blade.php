@@ -18,11 +18,11 @@
         <?php $id = 0 ?>
         @foreach($trade_page_images as $trade)
             <tr>
-                <td>{{ $id + 1 }}</td>
+                <td>{{ $id += 1 }}</td>
                 <td>{{ $trade->content }}</td>
                 <td><img src="storage/{{ $trade->image }}" alt="" style="width: 80px; height: 80px"></td>
-                <td>{{ $trade->created_at->format('M d Y - h:i')}}</td>
-                <td>{{ $trade->updated_at->format('M d Y - h:i') }}</td>
+                <td>{{ $trade->created_at->format('M d Y')}}</td>
+                <td>{{ $trade->updated_at->format('M d Y') }}</td>
                 <td>
                     <a href="{{ route('trades.edit',$trade->id) }}">
                         <button type="button" class="btn btn-outline-primary">Update</button>

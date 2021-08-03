@@ -18,7 +18,7 @@
         <?php $id = 0 ?>
         @foreach($contents as $content)
             <tr>
-                <td>{{ $id + 1 }}</td>
+                <td>{{ $id += 1 }}</td>
                 <td>{{ $content->title }}</td>
                 <td>{{ $content->content }}</td>
                 <td>{{ $content->created_at->format('M d Y')}}</td>

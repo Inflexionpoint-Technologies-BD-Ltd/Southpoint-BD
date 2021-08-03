@@ -229,7 +229,7 @@
         aria-controls="collapseTradeSlider"
     >
         <i class="fas fa-fw fa-cog"></i>
-        <span>Slider</span>
+        <span>Images</span>
     </a>
     <div
         id="collapseTradeSlider"
@@ -239,8 +239,8 @@
     >
         <div class="bg-white py-2 collapse-inner rounded">
             {{-- <h6 class="collapse-header">Custom Components:</h6> --}}
-            <a class="collapse-item" href="{{ route('trades.create') }}">Add trade slider</a>
-            <a class="collapse-item" href="{{ route('trades.index') }}">View all trade sliders</a>
+            <a class="collapse-item" href="{{ route('trades.create') }}">Add trade image</a>
+            <a class="collapse-item" href="{{ route('trades.index') }}">View all images</a>
         </div>
     </div>
 </li>

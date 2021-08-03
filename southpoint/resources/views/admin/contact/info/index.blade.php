@@ -22,7 +22,7 @@
         <?php $id = 0 ?>
         @foreach($contacts as $contact)
             <tr>
-                <td>{{ $id + 1 }}</td>
+                <td>{{ $id += 1 }}</td>
                 <td>{{ $contact->title }}</td>
                 <td>{{ $contact->map }}</td>
                 <td>{{ $contact->place }}</td>

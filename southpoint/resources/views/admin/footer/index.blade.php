@@ -20,7 +20,7 @@
         <?php $id = 0 ?>
         @foreach($footers as $footer)
             <tr>
-                <td>{{ $id + 1 }}</td>
+                <td>{{ $id += 1 }}</td>
                 <td>{{ $footer->title }}</td>
                 <td>{{ $footer->address }}</td>
                 <td>{{ $footer->tel }}</td>
