@@ -107,7 +107,7 @@
         <div class="text-center red-bg" data-midnight="black">
             <a href="#" class="pointer-large overlay-btn-box">
             <span class="overlay-btn" data-text="{{ $training->title }}"
-                  style="font-size: 40px;">{{ $training->title }}</span>
+                  style="font-size: 35px;">{{ $training->title }}</span>
             </a>
             <div class="container">
                 <p class="train padding-for-training-activities">{{ $training->content }}</p>
@@ -117,7 +117,7 @@
 
     {{--    --------------------------------------------------------------------------------------------------- end - training activities         --}}
 
-</main><!-- animsition-overlay end -->
+</main><!-- animation-overlay end -->
 
 
 <!-- footer start -->
