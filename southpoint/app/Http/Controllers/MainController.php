@@ -2,9 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\About;
 use App\Footer;
+use App\Message;
+use App\Profile;
 use App\Trade;
 use App\Training;
+use App\Client;
 use Illuminate\Http\Request;
 
 class MainController extends Controller
@@ -21,5 +25,28 @@ class MainController extends Controller
     }
 
     //    end - trades page functions --------------------------------------------------------------------------------
+
+
+    //    ---------------------------------------- home page functions -------------------------------------------------
+
+    public function home()
+    {
+        return view('main.home');
+    }
+
+    //    ------------------------------------------------------------------------------------ end - home page functions
+
+    //    ---------------------------------------- about page functions -------------------------------------------------
+
+    public function about(){
+        $abouts = About::all();
+        $messages = Message::all();
+        $profiles = Profile::all();
+        $clients = Client::all();
+        $footers = Footer::limit(2)->get();
+        return view('main.about',compact('abouts','messages','profiles','footers','clients'));
+    }
+    //    ------------------------------------------------------------------------------------- end - about page functions
+
 
 }

@@ -60,7 +60,7 @@
         </li><!-- nav-box end -->
         <!-- nav-box start -->
         <li class="nav-box nav-bg-change">
-            <a href="about.html" class="animsition-link pointer-large nav-link">
+            <a href="{{ route('page.about') }}" class="animsition-link pointer-large nav-link">
                 <span class="nav-btn" data-text="About Us">About Us</span>
             </a>
             <div class="nav-bg" style="background-image: url({{ asset('assets/images/navbar/about.jpg') }});"></div>

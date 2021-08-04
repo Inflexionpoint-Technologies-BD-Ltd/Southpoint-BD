@@ -33,7 +33,7 @@
             <tr>
                 <td>{{ $id += 1 }}</td>
                 <td>{{ $about->title }}</td>
-                <td>{{ $about->content }}</td>
+                <td>{{ \Illuminate\Support\Str::limit($about->content,30)  }}</td>
                 <td><img src="storage/{{ $about->image }}" alt="" style="width: 80px; height: 80px"></td>
                 <td>{{ $about->created_at->format('M d Y') }}</td>
                 <td>{{ $about->updated_at->format('M d Y') }}</td>

@@ -25,8 +25,8 @@
 
                 <div class="form-group">
                     <label for="exampleInputEmail1">Enter content</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                           placeholder="" name="content" class="@error('content') is-invalid @enderror">
+                    <textarea class="form-control @error('content') is-invalid @enderror" id="exampleFormControlTextarea1"
+                              rows="9" name="content"></textarea>
                     @error('content')
                     <div class="alert alert-danger" style="margin-top: 10px">{{ $message }}</div>
                     @enderror
