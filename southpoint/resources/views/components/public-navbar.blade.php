@@ -76,7 +76,7 @@
 
         <!-- nav-box start -->
         <li class="nav-box nav-bg-change">
-            <a href="services.html" class="animsition-link pointer-large nav-link">
+            <a href="{{ route('page.infrastructure') }}" class="animsition-link pointer-large nav-link">
                 <span class="nav-btn" data-text="Infrastructure">Infrastructure</span>
             </a>
             <div class="nav-bg"

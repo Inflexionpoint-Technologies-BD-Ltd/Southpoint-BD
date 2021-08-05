@@ -81,6 +81,12 @@ Route::get('/pages/about',[MainController::class,'about'])->name('page.about');
 
 // --------------------------------------------------------------------------- end - about page
 
+// -------------------------------------- infrastructure page ----------------------------------
+
+Route::get('/pages/infrastructure',[MainController::class,'infrastructure'])->name('page.infrastructure');
+
+// ------------------------------------------------------------------- end - infrastructure page
+
 
 // ------------------------------------------------------------------------------------------------------------------- end - public routes
 

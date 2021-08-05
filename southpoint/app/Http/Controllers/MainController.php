@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\About;
 use App\Footer;
+use App\Infrastructure;
+use App\InfrastructureImage;
 use App\Message;
 use App\Profile;
 use App\Trade;
@@ -38,15 +40,27 @@ class MainController extends Controller
 
     //    ---------------------------------------- about page functions -------------------------------------------------
 
-    public function about(){
+    public function about()
+    {
         $abouts = About::all();
         $messages = Message::all();
         $profiles = Profile::all();
         $clients = Client::all();
         $footers = Footer::limit(2)->get();
-        return view('main.about',compact('abouts','messages','profiles','footers','clients'));
+        return view('main.about', compact('abouts', 'messages', 'profiles', 'footers', 'clients'));
     }
     //    ------------------------------------------------------------------------------------- end - about page functions
+
+    //    ---------------------------------------- infrastructure page functions -------------------------------------------------
+
+    public function infrastructure()
+    {
+        $infrastructures = Infrastructure::all();
+        $infrastructure_images = InfrastructureImage::all();
+        $footers = Footer::limit(2)->get();
+        return view('main.infrastructure',compact('infrastructures','infrastructure_images','footers'));
+    }
+    //    ------------------------------------------------------------------------------------- end - infrastructure page functions
 
 
 }
