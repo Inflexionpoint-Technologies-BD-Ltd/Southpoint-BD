@@ -2463,7 +2463,7 @@ body.out .nav-container.active li li:nth-last-child(12) a {
 	content: attr(data-text);
 	position: absolute;
 	top: 50%;
-	color: blue;
+	color: red;
 	-webkit-transform: translateY(-50%);
 	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
@@ -3139,7 +3139,7 @@ body,
 }
 
 .text-color-4 {
-	color: #000000;
+	color: #fcfcfc;
 }
 
 .text-color-5 {
@@ -4160,7 +4160,7 @@ body.anim .scroll-btn-flip-box {
 
 .scroll-btn-flip:before,
 .scroll-btn-flip:after {
-	color: black;
+	color: white;
 	content: attr(data-text);
 	display: block;
 	position: absolute;

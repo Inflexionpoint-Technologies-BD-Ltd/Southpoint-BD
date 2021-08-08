@@ -4,16 +4,28 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>XEN</title>
+    <title>Trades - Southpoint BD</title>
 
     <!-- fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700%7COswald:300,400,500,600,700"
           rel="stylesheet" type="text/css">
 
+    <link rel="shortcut icon" href="{{ asset('assets/images/logo/south_point_white.png') }}" type="image/x-icon">
+
+
     <!-- styles -->
     <link href="{{ asset('assets/css/plugins.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('assets/css/trades.css') }}" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}">
+
+    {{--  ----------------------------------------------- audio ------------------------------------  --}}
+
+    <audio autoplay>
+        <source src="{{ asset('assets/music/bangla.mp3') }}" type="audio/ogg">
+        Your browser does not support the audio element.
+    </audio>
+
+    {{--  ----------------------------------------------------------------------------- end - audio   --}}
 </head>
 <body class="loader">
 <!-- loading start -->
@@ -41,7 +53,7 @@
         <a href="index.html" class="logo pointer-large animsition-link">
             <div class="logo-img-box">
                 <img class="logo-white" src="{{ asset('assets/images/logo/SP-Weblogo.png') }}" alt="logo">
-                <img class="logo-black" src="{{ asset('assets/images/logo/SP-Weblogo.png') }}" alt="logo">
+                <img class="logo-black" src="{{ asset('assets/images/logo/south_point_white.png') }}" alt="logo" style="width: 50px">
             </div>
         </a><!-- logo end -->
 
@@ -125,29 +137,36 @@
     <!-- flex-container start -->
     <div class="flex-container container top-bottom-padding-90">
 
+        <!-- column start -->
+        <div class="four-columns bottom-padding-60">
+            <div class="content-right-margin-10 footer-center-mobile">
+                <img class="footer-logo" src="{{ asset('assets/images/logo/SP-Weblogo.png') }}" alt="logo">
+            </div>
+        </div><!-- column end -->
 
     @foreach($footers as $footer)
 
         <!-- column start -->
-            <div class="six-columns bottom-padding-60">
+            <div class="four-columns bottom-padding-60">
                 <div class="content-left-right-margin-10 footer-left-mobile">
-
+                    <h4>{{ $footer->title }}</h4> <br>
                     <ul class="footer-information text-color-4">
-                        <li>{{ $footer->title }}</li>
-                        <li><i class="fas fa-map-marker-alt"></i><a href="#"
-                                                                    class="xsmall-title-oswald text-height-17">{{ $footer->address }}</a>
-                        </li>
+                        <li><i class="far fa-envelope"></i><a href="{{ $footer->email }}" class="xsmall-title-oswald">
+                                spoint@agni.com</a></li>
                         <li><i class="fas fa-mobile-alt"></i><a href="#"
-                                                                class="xsmall-title-oswald">{{ $footer->tel }}</a></li>
-                        <li><i class="far fa-envelope"></i><a href="mailto: spoint@agni.com"
-                                                              class="xsmall-title-oswald">{{ $footer->email }}</a></li>
+                                                                class="xsmall-title-oswald">{{ $footer->tel }}</a>
+                        </li>
+                        <li><i class="fas fa-map-marker-alt"></i><a href="#" class="xsmall-title-oswald text-height-17">{{ $footer->address }}</a>
+                        </li>
                     </ul>
                 </div>
             </div><!-- column end -->
-
     @endforeach
-
-
+    <!-- column start -->
+        <div class="twelve-columns">
+            <p class="p-letter-style text-color-4 footer-copyright">&copy; Copyright 2019 InflexionPoint. Theme by <a
+                    href="#">InflexionPoint</a></p>
+        </div><!-- column end -->
     </div><!-- flex-container end -->
 </footer><!-- footer end -->
 

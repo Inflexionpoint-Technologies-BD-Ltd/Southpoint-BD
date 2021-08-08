@@ -1,7 +1,7 @@
 <nav class="nav-container dark-bg-1">
     <!-- nav-logo start -->
     <div class="nav-logo">
-        <img src="{{ asset('assets/images/logo/south_point_white.png') }}" alt="logo" style="width: 50px">
+        <img src="{{ asset('assets/images/logo/SP-Weblogo.png') }}" alt="logo">
     </div><!-- nav-logo end -->
 
     <!-- menu-close -->
@@ -96,7 +96,7 @@
 
         <!-- nav-box start -->
         <li class="nav-box nav-bg-change">
-            <a href="contact.html" class="animsition-link pointer-large nav-link">
+            <a href="{{ route('page.contacts') }}" class="animsition-link pointer-large nav-link">
                 <span class="nav-btn" data-text="Contact">Contact</span>
             </a>
             <div class="nav-bg" style="background-image: url({{ asset('assets/images/navbar/contact.jpg') }});"></div>

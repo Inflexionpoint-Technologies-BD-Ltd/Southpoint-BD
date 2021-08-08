@@ -83,10 +83,16 @@ Route::get('/pages/about',[MainController::class,'about'])->name('page.about');
 
 // -------------------------------------- infrastructure page ----------------------------------
 
-Route::get('/pages/infrastructure',[MainController::class,'infrastructure'])->name('page.infrastructure');
+//Route::get('/pages/infrastructure',[MainController::class,'infrastructure'])->name('page.infrastructure');
+Route::get('/',[MainController::class,'infrastructure'])->name('page.infrastructure'); //infrastructure set as home page for a short time
 
 // ------------------------------------------------------------------- end - infrastructure page
 
+// ---------------------------------------- contact us page ------------------------------------
+
+Route::get("/pages/contact",[MainController::class,'contact'])->name("page.contacts");
+
+// ---------------------------------------- end - contact us page ------------------------------
 
 // ------------------------------------------------------------------------------------------------------------------- end - public routes
 

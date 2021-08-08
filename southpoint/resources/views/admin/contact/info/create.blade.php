@@ -62,7 +62,7 @@
                 @enderror
 
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Enter phone no</label>
+                    <label for="exampleInputEmail1">Enter email</label>
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
                            placeholder="" name="email" class="@error('email') is-invalid @enderror">
 

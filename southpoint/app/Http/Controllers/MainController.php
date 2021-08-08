@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\About;
+use App\Contact;
 use App\Footer;
 use App\Infrastructure;
 use App\InfrastructureImage;
@@ -61,6 +62,16 @@ class MainController extends Controller
         return view('main.infrastructure',compact('infrastructures','infrastructure_images','footers'));
     }
     //    ------------------------------------------------------------------------------------- end - infrastructure page functions
+
+    //    ---------------------------------------- contact page functions ----------------------------------------------------
+
+    public function contact(){
+        $contact_info = Contact::all();
+        $footers = Footer::limit(2)->get();
+        return view("main.contact",compact('contact_info','footers'));
+    }
+
+    //    --------------------------------------------------------------------------------------- end - contact page functions
 
 
 }

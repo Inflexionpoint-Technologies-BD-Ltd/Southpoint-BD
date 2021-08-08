@@ -22,7 +22,7 @@
             <tr>
                 <td>{{ $id += 1 }}</td>
                 <td>{{ $footer->title }}</td>
-                <td>{{ $footer->address }}</td>
+                <td>{{ \Illuminate\Support\Str::limit($footer->address,20)  }}</td>
                 <td>{{ $footer->tel }}</td>
                 <td>{{ $footer->email }}</td>
                 <td>{{ $footer->created_at->format('M d Y')}}</td>

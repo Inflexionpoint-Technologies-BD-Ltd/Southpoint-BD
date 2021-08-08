@@ -24,10 +24,10 @@
             <tr>
                 <td>{{ $id += 1 }}</td>
                 <td>{{ $contact->title }}</td>
-                <td>{{ $contact->map }}</td>
+                <td>{{ \Illuminate\Support\Str::limit($contact->map,10)  }}</td>
                 <td>{{ $contact->place }}</td>
-                <td>{{ $contact->address }}</td>
-                <td>{{ $contact->tel }}</td>
+                <td>{{ \Illuminate\Support\Str::limit($contact->address,15)  }}</td>
+                <td>{{  $contact->tel }}</td>
                 <td>{{ $contact->email }}</td>
                 <td>{{ $contact->created_at->format('M d Y')}}</td>
                 <td>{{ $contact->updated_at->format('M d Y') }}</td>

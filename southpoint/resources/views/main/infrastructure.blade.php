@@ -4,15 +4,26 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>South Point</title>
+    <title>Infrastructure - Southpoint BD</title>
 
     <!-- fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700%7COswald:300,400,500,600,700"
           rel="stylesheet" type="text/css">
 
+    <link rel="shortcut icon" href="{{ asset('assets/images/logo/south_point_white.png') }}" type="image/x-icon">
+
     <!-- styles -->
     <link href="{{ asset('assets/css/plugins.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('assets/css/infrastructure.css') }}" rel="stylesheet" type="text/css">
+
+    {{--  ----------------------------------------------- audio ------------------------------------  --}}
+
+    <audio autoplay>
+        <source src="{{ asset('assets/music/bangla.mp3') }}" type="audio/ogg">
+        Your browser does not support the audio element.
+    </audio>
+
+    {{--  ----------------------------------------------------------------------------- end - audio   --}}
 </head>
 <body class="loader">
 <!-- loading start -->
@@ -40,7 +51,7 @@
         <a href="index.html" class="logo pointer-large animsition-link">
             <div class="logo-img-box">
                 <img class="logo-white" src="{{ asset('assets/images/logo/SP-Weblogo.png') }}" alt="logo">
-                <img class="logo-black" src="{{ asset('assets/images/logo/SP-Weblogo.png') }}" alt="logo">
+                <img class="logo-black" src="{{ asset('assets/images/logo/south_point_white.png') }}" alt="logo" style="width: 50px">
             </div>
         </a><!-- logo end -->
 
