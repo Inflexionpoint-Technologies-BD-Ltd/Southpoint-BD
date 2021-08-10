@@ -55,6 +55,14 @@ Route::middleware(['auth'])->group(function () {
 
     //---------------------------------------------------------------------------------------- end - footer page routes
 
+    //-------------------------------------------- recruitment page routes ------------------------------------------------
+
+    Route::resource('recruitment',RecruitmentController::class);
+    Route::resource('service',ServiceController::class);
+    Route::resource('document',DocumentController::class);
+
+    //---------------------------------------------------------------------------------------- end - recruitment page routes
+
 });
 
 // ------------------------------------------------------------------------------------------------------------------- end - admin routes
@@ -100,7 +108,9 @@ Route::get("/pages/contact",[MainController::class,'contact'])->name("page.conta
 // ---------------------------------------------------------- test routes -----------------------------------------------------------
 
 //Route::get('test', function () {
-//    return view('main.trades');
+//    $recruitments = \App\Recruitment::all();
+//    return view('main.home',compact('recruitments'));
+////    return view('main.trades');
 //});
 
 // ---------------------------------------------------------------------------------------------------------------- end - test routes

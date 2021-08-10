@@ -397,6 +397,81 @@
 {{-- ---------------------------------------------------------------------------------------- end - contact Page elements --}}
 
 
+{{-- -------------------------------- recruitment page elements ------------------------------------- --}}
+
+<!-- Divider -->
+<hr class="sidebar-divider"/>
+
+{{-- ----------------------- recruitment item ----------------------- --}}
+
+<!-- Heading -->
+<div class="sidebar-heading">Recruitment</div>
+
+<!-- Nav Item - Pages Collapse Menu -->
+<li class="nav-item">
+    <a
+        class="nav-link collapsed"
+        href="#"
+        data-toggle="collapse"
+        data-target="#collapseRecruitment"
+        aria-expanded="true"
+        aria-controls="collapseRecruitment"
+    >
+        <i class="fas fa-fw fa-cog"></i>
+        <span>Recruitments</span>
+    </a>
+    <div
+        id="collapseRecruitment"
+        class="collapse"
+        aria-labelledby="headingTwo"
+        data-parent="#accordionSidebar"
+    >
+        <div class="bg-white py-2 collapse-inner rounded">
+            {{-- <h6 class="collapse-header">Custom Components:</h6> --}}
+            <a class="collapse-item" href="{{ route('recruitment.create') }}">Add recruitment</a>
+            <a class="collapse-item" href="{{ route('recruitment.index') }}">View all items</a>
+        </div>
+    </div>
+</li>
+
+{{-- ---------------------------------------- end recruitment item  --}}
+
+
+{{-- ----------------------- service item ----------------------- --}}
+
+<!-- Nav Item - Pages Collapse Menu -->
+<li class="nav-item">
+    <a
+        class="nav-link collapsed"
+        href="#"
+        data-toggle="collapse"
+        data-target="#collapseService"
+        aria-expanded="true"
+        aria-controls="collapseService"
+    >
+        <i class="fas fa-fw fa-cog"></i>
+        <span>Services</span>
+    </a>
+    <div
+        id="collapseService"
+        class="collapse"
+        aria-labelledby="headingTwo"
+        data-parent="#accordionSidebar"
+    >
+        <div class="bg-white py-2 collapse-inner rounded">
+            {{-- <h6 class="collapse-header">Custom Components:</h6> --}}
+            <a class="collapse-item" href="{{ route('service.create') }}">Add services</a>
+            <a class="collapse-item" href="{{ route('service.index') }}">View all items</a>
+        </div>
+    </div>
+</li>
+
+{{-- ---------------------------------------- end service item  --}}
+
+
+{{-- ------------------------------------------------------------------ end - recruitment Page elements --}}
+
+
 {{-- -------------------------------- Footer page elements ------------------------------------- --}}
 
 <!-- Divider -->

@@ -13,6 +13,6 @@ class AdminController extends Controller
 
     public function logoutAdmin(){
         Auth::logout();
-        return view('welcome');
+        return redirect("/");
     }
 }
