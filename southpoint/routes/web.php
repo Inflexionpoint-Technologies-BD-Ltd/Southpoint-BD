@@ -57,9 +57,10 @@ Route::middleware(['auth'])->group(function () {
 
     //-------------------------------------------- recruitment page routes ------------------------------------------------
 
-    Route::resource('recruitment',RecruitmentController::class);
-    Route::resource('service',ServiceController::class);
-    Route::resource('document',DocumentController::class);
+    Route::resource('recruitment',RecruitmentController::class);  // adding recruitments title and content
+    Route::resource('service',ServiceController::class); // adding service list and content
+    Route::resource('document',DocumentController::class); // adding document title of licence papers
+    Route::resource('paper',PaperController::class); // adding paper contents related to documents
 
     //---------------------------------------------------------------------------------------- end - recruitment page routes
 

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Document;
 use App\Paper;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,9 @@ class PaperController extends Controller
      */
     public function index()
     {
-        //
+        $papers = Paper::all();
+        return view('admin.recruitment.license.papers.index',compact('papers'));
+
     }
 
     /**
@@ -24,7 +27,8 @@ class PaperController extends Controller
      */
     public function create()
     {
-        //
+        $documents = Document::all();
+        return view('admin.recruitment.license.papers.create',compact('documents'));
     }
 
     /**
@@ -35,7 +39,24 @@ class PaperController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $inputs = \request()->validate([
+            'document_title' => 'required',
+            'image' => 'required',
+            'content' => 'required'
+        ]);
+
+        if (request('image')) {
+            $inputs['image'] = \request('image')->store('images');
+        }
+
+        $document = Document::where('title','=',$inputs['document_title'])->first();
+        $document->papers()->create([
+            'image' => $inputs['image'],
+            'content' => $inputs['content']
+        ]);
+
+        return back();
+
     }
 
     /**
@@ -55,9 +76,10 @@ class PaperController extends Controller
      * @param  \App\Paper  $paper
      * @return \Illuminate\Http\Response
      */
-    public function edit(Paper $paper)
+    public function edit($id)
     {
-        //
+        $paper = Paper::find($id);
+        return view('admin.recruitment.license.papers.edit',compact('paper'));
     }
 
     /**
@@ -69,7 +91,20 @@ class PaperController extends Controller
      */
     public function update(Request $request, Paper $paper)
     {
-        //
+        $inputs = \request()->validate([
+            'content' => 'required'
+        ]);
+
+        if (request('image')) {
+            $inputs['image'] = \request('image')->store('images');
+        }else {
+            $inputs['image'] = $paper->image;
+        }
+
+        $paper->update($inputs);
+
+        return redirect()->route('paper.index');
+
     }
 
     /**
@@ -80,6 +115,7 @@ class PaperController extends Controller
      */
     public function destroy(Paper $paper)
     {
-        //
+        $paper->delete();
+        return  redirect()->route('paper.index');
     }
 }

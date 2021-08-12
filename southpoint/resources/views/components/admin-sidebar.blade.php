@@ -402,10 +402,10 @@
 <!-- Divider -->
 <hr class="sidebar-divider"/>
 
-{{-- ----------------------- recruitment item ----------------------- --}}
-
 <!-- Heading -->
 <div class="sidebar-heading">Recruitment</div>
+
+{{-- ----------------------- recruitment item ----------------------- --}}
 
 <!-- Nav Item - Pages Collapse Menu -->
 <li class="nav-item">
@@ -435,6 +435,76 @@
 </li>
 
 {{-- ---------------------------------------- end recruitment item  --}}
+
+
+{{-- ----------------------- documents title ----------------------- --}}
+
+<!-- Divider -->
+<hr class="sidebar-divider"/>
+
+<!-- Nav Item - Pages Collapse Menu -->
+<li class="nav-item">
+    <a
+        class="nav-link collapsed"
+        href="#"
+        data-toggle="collapse"
+        data-target="#collapseDocumentsTitle"
+        aria-expanded="true"
+        aria-controls="collapseDocumentsTitle"
+    >
+        <i class="fas fa-fw fa-cog"></i>
+        <span>Document title</span>
+    </a>
+    <div
+        id="collapseDocumentsTitle"
+        class="collapse"
+        aria-labelledby="headingTwo"
+        data-parent="#accordionSidebar"
+    >
+        <div class="bg-white py-2 collapse-inner rounded">
+            {{-- <h6 class="collapse-header">Custom Components:</h6> --}}
+            <a class="collapse-item" href="{{ route('document.create') }}">Add title</a>
+            <a class="collapse-item" href="{{ route('document.index') }}">View all items</a>
+        </div>
+    </div>
+</li>
+
+{{-- ---------------------------------------- end documents title  --}}
+
+{{-- ----------------------- documents papers ----------------------- --}}
+
+
+<!-- Nav Item - Pages Collapse Menu -->
+<li class="nav-item">
+    <a
+        class="nav-link collapsed"
+        href="#"
+        data-toggle="collapse"
+        data-target="#collapseDocumentsPaper"
+        aria-expanded="true"
+        aria-controls="collapseDocumentsPaper"
+    >
+        <i class="fas fa-fw fa-cog"></i>
+        <span>Document papers</span>
+    </a>
+    <div
+        id="collapseDocumentsPaper"
+        class="collapse"
+        aria-labelledby="headingTwo"
+        data-parent="#accordionSidebar"
+    >
+        <div class="bg-white py-2 collapse-inner rounded">
+            {{-- <h6 class="collapse-header">Custom Components:</h6> --}}
+            <a class="collapse-item" href="{{ route('paper.create') }}">Add paper</a>
+            <a class="collapse-item" href="{{ route('paper.index') }}">View all items</a>
+        </div>
+    </div>
+</li>
+
+<!-- Divider -->
+<hr class="sidebar-divider"/>
+
+{{-- ---------------------------------------- end documents papers  --}}
 
 
 {{-- ----------------------- service item ----------------------- --}}
