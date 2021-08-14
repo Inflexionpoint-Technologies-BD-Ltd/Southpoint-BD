@@ -18,18 +18,22 @@
 
     {{--  ----------------------------------------------- audio ------------------------------------  --}}
 
-    <audio autoplay>
-        <source src="{{ asset('assets/music/bangla.mp3') }}" type="audio/ogg">
+    <audio preload="auto" autoplay="autoplay" id="my_audio">
+        <source src="{{ asset('assets/music/bangla.mp3') }}">
         Your browser does not support the audio element.
     </audio>
 
     {{--  ----------------------------------------------------------------------------- end - audio   --}}
+
+
 </head>
 <body class="loader">
+
 <!-- loading start -->
 <div class="loading">
     <img class="logo-loading" src="{{ asset('assets/images/logo/south_point_white.png') }}" alt="logo">
 </div><!-- loading end -->
+
 
 <!-- pointer start -->
 <div class="pointer" id="pointer">
@@ -70,6 +74,9 @@
 {{-- ------------------------------------------------------------------------------------------ end - navbar--}}
 
 <!-- animsition-overlay start -->
+
+
+
 <main class="animsition-overlay" data-animsition-overlay="true">
     <!-- page-head start -->
     <section id="up" class="page-head flex-min-height-box dark-bg-1">
@@ -112,7 +119,7 @@
     </section><!-- page-head end -->
 
     <!-- dark-bg-2 start -->
-    <section id="down" class="dark-bg-2 top-bottom-padding-120">
+    <section id="down" class="dark-bg-2 top-bottom-padding-120" data-midnight="black">
     @foreach($infrastructures as $infrastructure)
         <!-- container start -->
             <div data-animation-container class="text-center container small">
@@ -209,5 +216,6 @@
 <!-- scripts -->
 <script src="{{ asset('assets/js/plugins.js') }}"></script>
 <script src="{{ asset('assets/js/main.js') }}"></script>
+
 </body>
 </html>

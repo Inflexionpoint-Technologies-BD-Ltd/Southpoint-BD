@@ -20,7 +20,7 @@
         @foreach($papers as $paper)
             <tr>
                 <td>{{ $id += 1 }}</td>
-                <td>{{ $paper->document->title }}</td>
+                <td>{{ $paper->document->title ?? 'NO AVAILABLE TITLES' }}</td>
                 <td>{{ $paper->content }}</td>
                 <td><img src="storage/{{ $paper->image }}" alt="" style="width: 80px; height: 80px"></td>
                 <td>{{ $paper->created_at->format('M d Y')}}</td>

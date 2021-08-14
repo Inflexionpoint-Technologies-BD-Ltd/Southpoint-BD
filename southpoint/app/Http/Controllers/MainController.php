@@ -4,11 +4,14 @@ namespace App\Http\Controllers;
 
 use App\About;
 use App\Contact;
+use App\Document;
 use App\Footer;
 use App\Infrastructure;
 use App\InfrastructureImage;
 use App\Message;
 use App\Profile;
+use App\Recruitment;
+use App\Service;
 use App\Trade;
 use App\Training;
 use App\Client;
@@ -73,5 +76,16 @@ class MainController extends Controller
 
     //    --------------------------------------------------------------------------------------- end - contact page functions
 
+    // --------------------------------------------- recruitment page --------------------------------------------------------
+
+    public function recruitment(){
+        $recruitments = Recruitment::all();
+        $documents = Document::all();
+        $services = Service::all();
+        $footers = Footer::limit(2)->get();
+        return view("main.recruitment",compact('documents','recruitments','services','footers'));
+    }
+
+    // -----------------------------------------------------------------------------------------------  end - recruitment page
 
 }

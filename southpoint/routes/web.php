@@ -103,6 +103,13 @@ Route::get("/pages/contact",[MainController::class,'contact'])->name("page.conta
 
 // ---------------------------------------- end - contact us page ------------------------------
 
+// ---------------------------------------- recruitment page ------------------------------------
+
+Route::get("/pages/recruitment",[MainController::class,'recruitment'])->name("page.recruitment");
+
+// ---------------------------------------- recruitment page ------------------------------------
+
+
 // ------------------------------------------------------------------------------------------------------------------- end - public routes
 
 
