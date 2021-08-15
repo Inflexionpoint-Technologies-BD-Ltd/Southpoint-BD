@@ -4,7 +4,6 @@
     <div>
         <form action="{{ route('client.store') }}" method="post" enctype="multipart/form-data">
             {{ csrf_field() }}
-            <form>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Enter client list Title</label>
                     <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
@@ -16,17 +15,39 @@
                 @enderror
 
                 <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Enter client list content</label>
-                    <textarea class="form-control @error('content') is-invalid @enderror" id="exampleFormControlTextarea1" rows="11" name="content"></textarea>
+                    <label for="inputState">Select status state</label>
+                    <select id="inputState" class="form-control" name="status">
+                        <option></option>
+                        <option>active</option>
+                        <option>hold</option>
+                        <option>inactive</option>
+                    </select>
                 </div>
 
-                @error('content')
+                @error('status')
+                <div class="alert alert-danger" style="margin-top: 10px">{{ $message }}</div>
+                @enderror
+
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Enter top value : </label>
+                    <input type="number" name="top">
+                </div>
+
+                @error('top')
+                <div class="alert alert-danger" style="margin-top: 10px">{{ $message }}</div>
+                @enderror
+
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Enter left value : </label>
+                    <input type="number" name="left">
+                </div>
+
+                @error('left')
                 <div class="alert alert-danger" style="margin-top: 10px">{{ $message }}</div>
                 @enderror
 
                 <button type="submit" class="btn btn-primary" name="submit">Submit</button>
 
-            </form>
         </form>
     </div>
 @endsection

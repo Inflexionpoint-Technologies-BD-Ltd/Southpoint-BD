@@ -440,7 +440,7 @@
 {{-- ----------------------- documents title ----------------------- --}}
 
 <!-- Divider -->
-<hr class="sidebar-divider"/>
+<hr class="sidebar-divider" style="background-color: yellow"/>
 
 <!-- Nav Item - Pages Collapse Menu -->
 <li class="nav-item">
@@ -502,7 +502,7 @@
 </li>
 
 <!-- Divider -->
-<hr class="sidebar-divider"/>
+<hr class="sidebar-divider" style="background-color: yellow"/>
 
 {{-- ---------------------------------------- end documents papers  --}}
 

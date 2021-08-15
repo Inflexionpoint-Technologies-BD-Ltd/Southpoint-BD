@@ -1,12 +1,14 @@
 @extends('admin.index')
 
 @section('content')
-    <table id="example" class="display" style="width:100%; text-align: center">
+    <table id="example" class="display" style="width:100%">
         <thead>
         <tr>
             <th>Serial</th>
             <th>Title</th>
-            <th>Content</th>
+            <th>Status</th>
+            <th>Top value</th>
+            <th>Left value</th>
             <th>Created at</th>
             <th>Updated at</th>
             <th>Update</th>
@@ -21,7 +23,9 @@
             <tr>
                 <td>{{ $id += 1 }}</td>
                 <td>{{ $client->title }}</td>
-                <td>{{ $client->content }}</td>
+                <td>{{ $client->status }}</td>
+                <td>{{ $client->top }}</td>
+                <td>{{ $client->left }}</td>
                 <td>{{ $client->created_at->format('M d Y') }}</td>
                 <td>{{ $client->updated_at->format('M d Y') }}</td>
                 <td>
@@ -46,7 +50,9 @@
         <tr>
             <th>Serial</th>
             <th>Title</th>
-            <th>Content</th>
+            <th>Status</th>
+            <th>Top value</th>
+            <th>Left value</th>
             <th>Created at</th>
             <th>Updated at</th>
             <th>Update</th>

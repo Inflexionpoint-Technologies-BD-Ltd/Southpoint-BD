@@ -37,11 +37,12 @@ class ClientController extends Controller
     public function store(Request $request)
     {
         $inputs = \request()->validate([
-            'title' => 'required',
-            'content' => 'required',
+            'title' => 'required|unique:clients',
+            'status' => 'required',
+            'top'=> 'required | integer',
+            'left'=> 'required | integer',
         ]);
 
-        session()->flash('create', 'Data created successfully');
         Client::create($inputs);
         return redirect()->back();
     }
@@ -81,10 +82,10 @@ class ClientController extends Controller
 
         $inputs = \request()->validate([
             'title' => 'required',
-            'content' => 'required',
+            'status' => 'required',
+            'top'=> 'required | integer',
+            'left'=> 'required | integer',
         ]);
-
-        session()->flash('update', 'Data updated successfully');
         $client->update($inputs);
         return redirect()->route('client.index');
     }
