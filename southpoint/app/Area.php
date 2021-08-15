@@ -4,12 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Client extends Model
+class Area extends Model
 {
     protected $guarded = [];
 
-    public function area()
-    {
-        return $this->hasMany(Area::class);
+    public function client(){
+        return $this->belongsTo(Client::class);
     }
 }

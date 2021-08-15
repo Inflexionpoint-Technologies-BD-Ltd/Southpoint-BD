@@ -172,7 +172,10 @@
 
 {{-- ----------------------------------------- end - company profile item  --}}
 
-{{-- -----------------------  company profile item ----------------------- --}}
+{{-- -----------------------  clients lists country item ----------------------- --}}
+
+<!-- Divider -->
+<hr class="sidebar-divider" style="background-color: yellow"/>
 
 <!-- Nav Item - Pages Collapse Menu -->
 <li class="nav-item">
@@ -185,7 +188,7 @@
         aria-controls="collapseClient"
     >
         <i class="fas fa-fw fa-cog"></i>
-        <span>Clients List</span>
+        <span>Clients country</span>
     </a>
     <div
         id="collapseClient"
@@ -195,13 +198,45 @@
     >
         <div class="bg-white py-2 collapse-inner rounded">
             {{-- <h6 class="collapse-header">Custom Components:</h6> --}}
-            <a class="collapse-item" href="{{route('client.create')}}">Add clients info</a>
+            <a class="collapse-item" href="{{route('client.create')}}">Add country</a>
             <a class="collapse-item" href="{{route('client.index')}}">View all info</a>
         </div>
     </div>
 </li>
 
-{{-- ----------------------------------------- end - company profile item  --}}
+{{-- ----------------------------------------- end - clients lists country item  --}}
+
+
+{{-- -----------------------  clients countries location list ----------------------- --}}
+
+<!-- Nav Item - Pages Collapse Menu -->
+<li class="nav-item">
+    <a
+        class="nav-link collapsed"
+        href="#"
+        data-toggle="collapse"
+        data-target="#collapseClientList"
+        aria-expanded="true"
+        aria-controls="collapseClientList"
+    >
+        <i class="fas fa-fw fa-cog"></i>
+        <span>Clients Area</span>
+    </a>
+    <div
+        id="collapseClientList"
+        class="collapse"
+        aria-labelledby="headingTwo"
+        data-parent="#accordionSidebar"
+    >
+        <div class="bg-white py-2 collapse-inner rounded">
+            {{-- <h6 class="collapse-header">Custom Components:</h6> --}}
+            <a class="collapse-item" href="{{route('area.create')}}">Add location</a>
+            <a class="collapse-item" href="{{route('area.index')}}">View all info</a>
+        </div>
+    </div>
+</li>
+
+{{-- ----------------------------------------- end - clients countries location list  --}}
 
 
 
@@ -211,7 +246,7 @@
 {{-- ------------------------------------------ Trade page -------------------------------------------- --}}
 
 <!-- Divider -->
-<hr class="sidebar-divider"/>
+<hr class="sidebar-divider" style="background-color: yellow"/>
 
 <!-- Heading -->
 <div class="sidebar-heading">Trades</div>

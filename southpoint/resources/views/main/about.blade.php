@@ -109,7 +109,7 @@
     </section><!-- page-head end -->
 
     <!-- section start -->
-    <section class="dark-bg-1 top-bottom-padding-120" data-midnight="black">
+    <section class="dark-bg-1 top-bottom-padding-120">
 
     @foreach($abouts as $about)
         <!-- container start -->
@@ -119,13 +119,7 @@
                         data-animation="overlay-anim2">{{ $about->title }}</h2>
                 </div>
                 <div class="top-margin-30">
-                    <p style="font-weight: 600; font-size: 14px">
-                        {{ $about->content }}
-                    </p>
-                    <!-- <h3 data-animation-child class="small-title-oswald text-color-2 text-height-20 fade-anim-box tr-delay01" data-animation="fade-anim">Succulents mlkshk hammock jean shorts flexitarian chicharrones, skateboard 90's knausgaard heirloom sustainable fixie forage. Vegan cloud bread forage lyft, cornhole food truck salvia portland locavore mlkshk. Etsy synth taxidermy godard DIY, tote bag fingerstache</h3>
-                    <p data-animation-child class="p-style-xsmall text-color-1 fade-anim-box tr-delay02" data-animation="fade-anim">Hoodie roof party organic umami kombucha thundercats. Pok pok normcore snackwave venmo deep v, quinoa everyday carry la croix. Tattooed chia kickstarter, woke ramps subway tile meggings enamel pin. Sustainable pop-up craft beer single-origin coffee.</p>
-                    <p data-animation-child class="p-style-xsmall text-color-1 fade-anim-box tr-delay03" data-animation="fade-anim">Pok pok authentic fashion axe, vegan venmo leggings raclette tousled twee tattooed.</p>
-                    <p data-animation-child class="p-style-xsmall text-color-1 fade-anim-box tr-delay04" data-animation="fade-anim">Yuccie jianbing bespoke retro, photo booth salvia hella meh post-ironic cornhole tacos plaid. Helvetica hella vexillologist, prism lo-fi activated charcoal iPhone thundercats irony meggings meh cardigan chartreuse blue bottle hell of. Irony fixie tilde beard everyday.</p> -->
+                    <p style="font-weight: 600; font-size: 14px; white-space: break-spaces; text-align: justify">{{ $about->content }}</p>
                 </div>
             </div><!-- container end -->
         @endforeach
@@ -146,11 +140,11 @@
                         <img src="{{ asset('storage/'.$message->image) }}" alt="author">
                         <div class="testimonials-content">
                             <p class="text-color-4"
-                               style="font-weight: 600; font-size: 14px">{{ $message->message }}</p>
+                               style="font-weight: 600; font-size: 14px; white-space: break-spaces; text-align: justify">{{ $message->message }}</p>
                         </div>
                         <div class="text-color-1 small-title-oswald">
-                            <span class="text-color-2">{{ $message->name }},</span> <span
-                                class="text-color-3">{{ $message->position }}</span>
+                            <span class="text-color-2">{{ $message->name }},</span>
+                            <span class="text-color-3">{{ $message->position }}</span>
                         </div>
                     </div><!-- slide end -->
                 </div><!-- swiper-wrapper end -->
@@ -229,19 +223,24 @@
                     {{--  --------------- client list loop ----------------- --}}
 
                     @foreach($clients as $client)
-                    <button
-                        class="map-point"
-                        style="top: {{ $client->top ."%" }}; left: {{ $client->left ."%" }}; background-color: @if($client->status == "active") green @elseif($client->status == "hold") #c65102 @else red @endif"
-                    >
-                        <div class="content overflow-auto">
-                            <div class="centered-y">
-                                <h2 style="font-size: 17px">{{ $client->title }}</h2>
-                                <li style="font-size: 13px; list-style: initial">
-                                    You can put plenty of details in here. In the original
-                                </li>
+                        <button
+                            class="map-point" data-toggle="modal" data-target="#exampleModal" id="test"
+                            style="top: {{ $client->top ."%" }}; left: {{ $client->left ."%" }}; background-color: @if($client->status == "active") green @elseif($client->status == "hold") #c65102 @else red @endif"
+                        >
+                            <div class="content overflow-auto">
+                                <div class="centered-y">
+                                    <h2 style="font-size: 17px; text-align: center">{{ $client->title }}</h2>
+                                    <hr>
+                                    @foreach($client->area as $area)
+                                        <li style="font-size: 12px; list-style: initial">
+                                            {{$area->area}}
+                                        </li>
+                                    @endforeach
+                                </div>
                             </div>
-                        </div>
-                    </button>
+
+
+                        </button>
                     @endforeach
 
                     {{--  --------------------------- end - client list loop  --}}
@@ -256,7 +255,6 @@
     {{--  --------------------------------------------------------------------------------------- end - client list   --}}
 
 
-
 </main><!-- animsition-overlay end -->
 
 <!-- footer start -->
@@ -264,29 +262,38 @@
     <!-- flex-container start -->
     <div class="flex-container container top-bottom-padding-90">
 
+        <!-- column start -->
+        <div class="four-columns bottom-padding-60">
+            <div class="content-right-margin-10 footer-center-mobile">
+                <img class="footer-logo" src="{{ asset('assets/images/logo/SP-Weblogo.png') }}" alt="logo">
+            </div>
+        </div><!-- column end -->
 
     @foreach($footers as $footer)
 
         <!-- column start -->
-            <div class="six-columns bottom-padding-60">
+            <div class="four-columns bottom-padding-60">
                 <div class="content-left-right-margin-10 footer-left-mobile">
-
-                    <ul class="footer-information text-color-4">
-                        <li>{{ $footer->title }}</li>
-                        <li><i class="fas fa-map-marker-alt"></i><a href="#"
-                                                                    class="xsmall-title-oswald text-height-17">{{ $footer->address }}</a>
-                        </li>
+                    <h4 style="color: black">{{ $footer->title }}</h4> <br>
+                    <ul class="footer-information text-color-4" style="color: black">
+                        <li><i class="far fa-envelope"></i><a href="{{ $footer->email }}" class="xsmall-title-oswald" style="color: black">
+                                spoint@agni.com</a></li>
                         <li><i class="fas fa-mobile-alt"></i><a href="#"
-                                                                class="xsmall-title-oswald">{{ $footer->tel }}</a></li>
-                        <li><i class="far fa-envelope"></i><a href="mailto: spoint@agni.com"
-                                                              class="xsmall-title-oswald">{{ $footer->email }}</a></li>
+                                                                class="xsmall-title-oswald" style="color: black">{{ $footer->tel }}</a>
+                        </li>
+                        <li><i class="fas fa-map-marker-alt"></i><a href="#"
+                                                                    class="xsmall-title-oswald text-height-17" style="color: black">{{ $footer->address }}</a>
+                        </li>
                     </ul>
                 </div>
             </div><!-- column end -->
-
-        @endforeach
-
-
+    @endforeach
+    <!-- column start -->
+        <div class="twelve-columns">
+            <p class="p-letter-style text-color-4 footer-copyright"><a href="https://inflexionpointbd.com/"
+                                                                       target="_blank" style="color: black">&copy; Copyright 2021
+                    InflexionPoint Technologies BD Ltd</a></p>
+        </div><!-- column end -->
     </div><!-- flex-container end -->
 </footer><!-- footer end -->
 

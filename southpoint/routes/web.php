@@ -37,7 +37,8 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('/about', 'AboutController'); // about information of about page
     Route::resource('/message', 'MessageController'); // director's message
     Route::resource('/profile', 'ProfileController'); //company profile from about us page
-    Route::resource('/client', 'ClientController'); // company clients list
+    Route::resource('/client', 'ClientController'); // company clients country
+    Route::resource('/area', AreaController::class); // company clients area
     //---------------------------------------------------------------------------------------- end - about page routes
 
     // ---------------------------------------------- Infrastructure page routes -------------------------------------

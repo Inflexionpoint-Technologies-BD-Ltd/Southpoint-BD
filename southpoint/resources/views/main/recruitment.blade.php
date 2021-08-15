@@ -133,7 +133,7 @@
 {{-- -------------------------------------------------------------- recruitment ----------------------------------------------------   --}}
 
 <!-- dark-bg-2 start -->
-    <section id="down" class="dark-bg-2 top-bottom-padding-120" data-midnight="black">
+    <section id="down" class="dark-bg-2 top-bottom-padding-120" data-midnight="black" style="padding: 200px 0px">
     @foreach($recruitments as $recruitment)
         <!-- container start -->
             <div data-animation-container class="text-center container small">
@@ -153,11 +153,8 @@
                     data-animation-child
                     class="text-color-5 p-style-small fade-anim-box tr-delay04"
                     data-animation="fade-anim"
-                    style="color: darkgrey"
-                >
-                    {{ $recruitment->content }}
-                    <br/><br/><br/><br/><br/><br/>
-                </p>
+                    style="color: darkgrey; white-space: break-spaces; text-align: justify;"
+                >{{ $recruitment->content }}</p>
             </div>
             <!-- container end -->
         @endforeach
