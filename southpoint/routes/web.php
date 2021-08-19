@@ -7,11 +7,6 @@ use App\Http\Controllers\MainController;
 
 // Route::get('/home', 'HomeController@index')->name('home');
 
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes(['register' => false]);
 
 
@@ -80,7 +75,7 @@ Route::get('/pages/trades',[MainController::class,'trades'])->name('page.trades'
 
 // ------------------------------------------- home page ------------------------------------
 
-//Route::get('/',[MainController::class,'home'])->name('page.home');
+Route::get('/',[MainController::class,'home'])->name('page.home');
 
 // ---------------------------------------------------------------------------- end - home page
 
@@ -93,8 +88,7 @@ Route::get('/pages/about',[MainController::class,'about'])->name('page.about');
 
 // -------------------------------------- infrastructure page ----------------------------------
 
-//Route::get('/pages/infrastructure',[MainController::class,'infrastructure'])->name('page.infrastructure');
-Route::get('/',[MainController::class,'infrastructure'])->name('page.infrastructure'); //infrastructure set as home page for a short time
+Route::get('/pages/infrastructure',[MainController::class,'infrastructure'])->name('page.infrastructure');
 
 // ------------------------------------------------------------------- end - infrastructure page
 
@@ -112,14 +106,3 @@ Route::get("/pages/recruitment",[MainController::class,'recruitment'])->name("pa
 
 
 // ------------------------------------------------------------------------------------------------------------------- end - public routes
-
-
-// ---------------------------------------------------------- test routes -----------------------------------------------------------
-
-//Route::get('test', function () {
-//    $recruitments = \App\Recruitment::all();
-//    return view('main.home',compact('recruitments'));
-////    return view('main.trades');
-//});
-
-// ---------------------------------------------------------------------------------------------------------------- end - test routes

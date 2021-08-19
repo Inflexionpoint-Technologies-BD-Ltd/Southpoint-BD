@@ -12,6 +12,7 @@ use App\Message;
 use App\Profile;
 use App\Recruitment;
 use App\Service;
+use App\Slider;
 use App\Trade;
 use App\Training;
 use App\Client;
@@ -37,7 +38,9 @@ class MainController extends Controller
 
     public function home()
     {
-        return view('main.home');
+        $sliders = Slider::all();
+        $abouts = About::all();
+        return view('main.home',compact("sliders",'abouts'));
     }
 
     //    ------------------------------------------------------------------------------------ end - home page functions

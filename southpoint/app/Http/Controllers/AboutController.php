@@ -84,6 +84,7 @@ class AboutController extends Controller
         $about = About::find($id);
 
         $inputs = \request()->validate([
+            'title' => 'required',
             'content' => 'required'
         ]);
 
