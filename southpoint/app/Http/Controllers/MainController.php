@@ -6,6 +6,7 @@ use App\About;
 use App\Contact;
 use App\Document;
 use App\Footer;
+use App\HomeContet;
 use App\Infrastructure;
 use App\InfrastructureImage;
 use App\Message;
@@ -40,7 +41,11 @@ class MainController extends Controller
     {
         $sliders = Slider::all();
         $abouts = About::all();
-        return view('main.home',compact("sliders",'abouts'));
+        $messages = Message::all();
+        $trades = Trade::all();
+        $footers = Footer::all();
+        $contents = HomeContet::all();
+        return view('main.home',compact("sliders",'abouts','messages','trades','footers','contents'));
     }
 
     //    ------------------------------------------------------------------------------------ end - home page functions
