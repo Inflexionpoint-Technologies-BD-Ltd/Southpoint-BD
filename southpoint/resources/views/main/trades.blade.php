@@ -50,7 +50,7 @@
     <!-- header-flex-box start -->
     <div class="header-flex-box">
         <!-- logo start -->
-        <a href="index.html" class="logo pointer-large animsition-link">
+        <a href="/" class="logo pointer-large animsition-link">
             <div class="logo-img-box">
                 <img class="logo-white" src="{{ asset('assets/images/logo/SP-Weblogo.png') }}" alt="logo">
                 <img class="logo-black" src="{{ asset('assets/images/logo/south_point_white.png') }}" alt="logo" style="width: 50px">
@@ -89,7 +89,7 @@
             <?php $id = 0 ?>
             @foreach($trades as $trade)
                 <!-- grid-item start -->
-                    <a href="project.html" class="animsition-link grid-item uiux">
+                    <a href="#" class="grid-item uiux">
                         <div class="work_item pointer-large hover-box hidden-box custom-work-item">
                             <img class="hover-img" src="{{asset('storage/'.$trade->image)}}" alt=""
                                  style="height: 200px;">
@@ -97,7 +97,7 @@
                                 <span class="small-title-oswald red-color work-title-overlay">{{ $id += 1 }} . </span>
                                 <h3 class="title-style text-color-4">
                                     <span
-                                        class="work-title-overlay work-title-delay02">{{ $trade->content }}</span><br>
+                                        class="work-title-overlay work-title-delay02" style="color: white">{{ $trade->content }}</span><br>
                                     <!-- <span class="work-title-overlay work-title-delay03">brooklyn messeng</span> -->
                                 </h3>
                             </div>

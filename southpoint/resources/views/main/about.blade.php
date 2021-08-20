@@ -49,7 +49,7 @@
     <!-- header-flex-box start -->
     <div class="header-flex-box">
         <!-- logo start -->
-        <a href="index.html" class="logo pointer-large animsition-link">
+        <a href="/" class="logo pointer-large animsition-link">
             <div class="logo-img-box">
                 <img class="logo-white" src="{{ asset('assets/images/logo/SP-Weblogo.png') }}" alt="logo">
                 <img class="logo-black" src="{{ asset('assets/images/logo/south_point_white.png') }}" alt="logo"
@@ -73,7 +73,7 @@
 <!-- animsition-overlay start -->
 <main class="animsition-overlay" data-animsition-overlay="true">
     <!-- page-head start -->
-    <section id="up" class="page-head flex-min-height-box dark-bg-2">
+    <section id="up" class="page-head flex-min-height-box dark-bg-1">
         <!-- page-head-bg -->
         <div class="page-head-bg overlay-loading2"
              style="background-image: url({{ asset('assets/images/navbar/contact.jpg') }});"></div>
@@ -87,10 +87,10 @@
                     <div class="content-left-margin-40">
                         <h2 class="overlay-loading2 tr-delay03 large-title red-color">South Point Overseas Limited</h2>
                         <h3 class="large-title-bold text-color-4" style="font-size: 30px; margin-top: 20px">
-                            <span class="overlay-loading2 overlay-light-bg-1 tr-delay04">Most Established Company</span><br>
+                            <span class="overlay-loading2 overlay-light-bg-1 tr-delay04 text-color-1">Most Established Company</span><br>
                             <span
-                                class="overlay-loading2 overlay-light-bg-1 tr-delay05">For Human Resource Development</span><br>
-                            <span class="overlay-loading2 overlay-light-bg-1 tr-delay06">& overseas employment</span>
+                                class="overlay-loading2 overlay-light-bg-1 tr-delay05 text-color-1">For Human Resource Development</span><br>
+                            <span class="overlay-loading2 overlay-light-bg-1 tr-delay06 text-color-1">& overseas employment</span>
                         </h3>
                     </div>
                 </div><!-- column end -->

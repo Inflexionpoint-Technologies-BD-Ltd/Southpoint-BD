@@ -21,9 +21,9 @@ use Illuminate\Support\Str;
 $factory->define(User::class, function (Faker $faker) {
     return [
         'name' => "Tahmid",
-        'email' => "tahmid.tf1@gmail.com",
+        'email' => "spoint@agni.com",
         'email_verified_at' => now(),
-        'password' => Hash::make('123456789'), // password
+        'password' => Hash::make('SP##6795SIS'), // password
         'remember_token' => Str::random(10),
     ];
 });

@@ -57,7 +57,7 @@
     <!-- header-flex-box start -->
     <div class="header-flex-box">
         <!-- logo start -->
-        <a href="index.html" class="logo pointer-large animsition-link">
+        <a href="/" class="logo pointer-large animsition-link">
             <div class="logo-img-box">
                 <img
                     class="logo-white"

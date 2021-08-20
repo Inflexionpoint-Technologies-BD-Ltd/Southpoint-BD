@@ -22,7 +22,7 @@
                 <span class="nav-btn" data-text="Home">Home</span>
             </a> -->
 
-            <a href="about.html" class="animsition-link pointer-large nav-link">
+            <a href="{{ route('page.home') }}" class="animsition-link pointer-large nav-link">
                 <span class="nav-btn" data-text="Home">Home</span>
             </a>
 

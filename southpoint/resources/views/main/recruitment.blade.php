@@ -58,7 +58,7 @@
     <!-- header-flex-box start -->
     <div class="header-flex-box">
         <!-- logo start -->
-        <a href="index.html" class="logo pointer-large animsition-link">
+        <a href="/" class="logo pointer-large animsition-link">
             <div class="logo-img-box">
                 <img class="logo-white" src="{{ asset('assets/images/logo/SP-Weblogo.png') }}" alt="logo">
                 <img class="logo-black" src="{{ asset('assets/images/logo/south_point_white.png') }}" alt="logo" style="width: 50px">
