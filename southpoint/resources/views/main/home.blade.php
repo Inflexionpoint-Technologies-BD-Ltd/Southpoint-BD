@@ -13,16 +13,8 @@
         type="text/css"
     />
 
-    {{--  ----------------------------------------------- audio ------------------------------------  --}}
 
-    <audio autoplay>
-        <source src="{{ asset('assets/music/bangla.mp3') }}" type="audio/ogg">
-        Your browser does not support the audio element.
-    </audio>
-
-{{--  ----------------------------------------------------------------------------- end - audio   --}}
-
-<!-- styles -->
+    <!-- styles -->
     <link href="{{asset('assets/css/plugins.css')}}" rel="stylesheet" type="text/css"/>
     <link href="{{asset('assets/css/index.css')}}" rel="stylesheet" type="text/css"/>
 </head>
@@ -72,6 +64,18 @@
 <x-public-navbar></x-public-navbar>
 
 {{-- ------------------------------------------------------------------------------------------ end - navbar--}}
+
+{{--  ----------------------------------------------- audio ------------------------------------  --}}
+
+<audio autoplay loop id="playAudio">
+    <source src="{{ asset('assets/music/bangla.mp3') }}" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<iframe src="{{ asset('assets/music/bangla.mp3') }}" allow="autoplay" style="display:none" id="iframeAudio">
+</iframe>
+
+{{--  ----------------------------------------------------------------------------- end - audio   --}}
 
 <!-- animsition-overlay start -->
 <main class="animsition-overlay" data-animsition-overlay="true">
@@ -392,7 +396,7 @@
     <!--------------------------------------------- video-content-bg end ------------------------------------>
 
     <!-- section start -->
-    <section class="light-bg-1 top-bottom-padding-120" data-midnight="black">
+    <section class="light-bg-1 top-bottom-padding-120">
         <!-- container start -->
         <div data-animation-container class="container small bottom-padding-60">
             <div class="text-center">
@@ -521,5 +525,23 @@
 <!-- scripts -->
 <script src="{{asset('assets/js/plugins.js')}}"></script>
 <script src="{{asset('assets/js/main.js')}}"></script>
+
+{{--<script>--}}
+{{--    var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);--}}
+{{--    if (!isChrome){--}}
+{{--        $('#iframeAudio').remove()--}}
+{{--    }--}}
+{{--    else {--}}
+{{--        $('#playAudio').remove() // just to make sure that it will not have 2x audio in the background--}}
+{{--    }--}}
+{{--</script>--}}
+
+<script>
+
+    document.body.addEventListener("mousemove", function () {
+        audio = document.getElementById('playAudio');
+        audio.play()
+    })
+</script>
 </body>
 </html>

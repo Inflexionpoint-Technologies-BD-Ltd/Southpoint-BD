@@ -82,7 +82,7 @@
     <section id="up" class="page-head flex-min-height-box dark-bg-1">
         <!-- page-head-bg -->
         <div class="page-head-bg overlay-loading2"
-             style="background-image: url({{ asset('assets/images/navbar/home.jpg') }});"></div>
+             style="background-image: url({{ asset('assets/images/navbar/infrastructure.jpg') }});"></div>
 
              <div class="flex-min-height-inner">
             <!-- flex-container start -->

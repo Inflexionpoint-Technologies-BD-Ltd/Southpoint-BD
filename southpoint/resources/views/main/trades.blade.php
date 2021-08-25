@@ -79,35 +79,77 @@
         <div class="container">
             <div class="text-center">
                 <h2 class="large-title text-height-10 title-fill" data-animation="title-fill-anim" data-text="TRADES">
-                    TRADES</h2><br>
+                    TRADES</h2><br><br><br>
             </div>
 
 
-
-            {{--    -------------------------------------------------- trade images --------------------------------------------------------        --}}
-            <div class="works">
-            <?php $id = 0 ?>
-            @foreach($trades as $trade)
-                <!-- grid-item start -->
-                    <a href="#" class="grid-item uiux">
-                        <div class="work_item pointer-large hover-box hidden-box custom-work-item">
-                            <img class="hover-img" src="{{asset('storage/'.$trade->image)}}" alt=""
-                                 style="height: 200px;">
-                            <div class="works-content">
-                                <span class="small-title-oswald red-color work-title-overlay">{{ $id += 1 }} . </span>
-                                <h3 class="title-style text-color-4">
-                                    <span
-                                        class="work-title-overlay work-title-delay02" style="color: white">{{ $trade->content }}</span><br>
-                                    <!-- <span class="work-title-overlay work-title-delay03">brooklyn messeng</span> -->
-                                </h3>
-                            </div>
+        <!--------------------------- trades-slider start ----------------------------------->
+            <div class="about-slider bottom-padding-60">
+                <!-- swiper-wrapper start -->
+                <div class="swiper-wrapper">
+                    @foreach($trades as $trade)
+                        <div class="swiper-slide">
+                            <!-- <a class="photo-popup pointer-zoom" href="assets/images/about/tiling.png">
+                                              <img src="assets/images/about/tiling.png" style="height: 400px;" alt="title">
+                                          </a>
+                                          <p style="text-align: center; font-weight: 600; font-size: x-large;">Tiling</p> -->
+                            <!-- inner slide start -->
+                            <a
+                                href="{{ asset('storage/'.$trade->image) }}"
+                                class="swiper-slide photo-popup pointer-zoom"
+                            >
+                                <div class="hidden-box">
+                                    <img
+                                        class="hover-img"
+                                        src="{{ asset('storage/'.$trade->image) }}"
+                                        style="height: 400px"
+                                        alt="project"
+                                    />
+                                </div>
+                                <div
+                                    class="portfolio-slider2-content"
+                                    style="text-align: center"
+                                >
+                  <span
+                      class="
+                      small-title-oswald
+                      red-color
+                      portfolio-slider-overlay
+                    "
+                  >Tiling</span
+                  >
+                                    <h2 class="title-style text-color-4">
+                    <span class="hidden-box d-block text-height-10">
+                      <span class="portfolio-slider-fade portfolio-slider-tr-03"
+                      >{{ $trade->content }}</span
+                      >
+                    </span>
+                                    </h2>
+                                </div>
+                            </a
+                            ><!-- inner slide end -->
                         </div>
-                    </a><!-- grid-item end -->
-                @endforeach
+                    @endforeach
+                </div>
+                <!-- swiper-wrapper end -->
 
-            </div><!-- works end -->
+                <!-- swiper-button-next start -->
+                <div class="swiper-button-next">
+                    <div class="slider-arrow-next-box">
+                        <span class="slider-arrow-next"></span>
+                    </div>
+                </div>
+                <!-- swiper-button-next end -->
+                <!-- swiper-button-prev start -->
+                <div class="swiper-button-prev">
+                    <div class="slider-arrow-prev-box">
+                        <span class="slider-arrow-prev"></span>
+                    </div>
+                </div>
+                <!-- swiper-button-prev end -->
+            </div>
+            <!---------------------------- trades-slider end ------------------------------------>
 
-            {{--    ------------------------------------------------------------------------------------------------ end - trade images        --}}
         </div><!-- container end -->
     </section><!-- dark-bg-2 end -->
 

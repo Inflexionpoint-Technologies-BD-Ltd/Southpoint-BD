@@ -91,7 +91,7 @@
         <div
             class="page-head-bg overlay-loading2"
             style="
-                background-image: url({{ asset('assets/images/navbar/contact.jpg') }});
+                background-image: url({{ asset('assets/images/navbar/trade.jpg') }});
                 "
         ></div>
 
