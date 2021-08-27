@@ -6889,8 +6889,8 @@ body.anim .slider-arrow-next-box {
 	left: 6px;
 	width: 16px;
 	height: 16px;
-	border-bottom: 2px solid black;
-	border-left: 2px solid black;
+	border-bottom: 2px solid white;
+	border-left: 2px solid white;
 	-webkit-transform: rotate(45deg);
 	-ms-transform: rotate(45deg);
 	transform: rotate(45deg);
@@ -6903,8 +6903,8 @@ body.anim .slider-arrow-next-box {
 	left: auto;
 	right: 6px;
 	border: none;
-	border-top: 2px solid black;
-	border-right: 2px solid #585e63;
+	border-top: 2px solid #ffffff;
+	border-right: 2px solid #ffffff;
 }
 
 .swiper-button-prev:hover .slider-arrow-prev:before {

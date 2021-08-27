@@ -164,7 +164,7 @@
                   style="font-size: 35px;">{{ $training->title }}</span>
             </a>
             <div class="container">
-                <p class="train padding-for-training-activities">{{ $training->content }}</p>
+                <p class="train padding-for-training-activities" style="text-align: justify">{{ $training->content }}</p>
             </div>
         </div>
     @endforeach

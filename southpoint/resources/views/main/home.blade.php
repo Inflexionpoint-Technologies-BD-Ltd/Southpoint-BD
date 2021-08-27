@@ -67,10 +67,9 @@
 
 {{--  ----------------------------------------------- audio ------------------------------------  --}}
 
-<audio autoplay loop id="playAudio">
-    <source src="{{ asset('assets/music/bangla.mp3') }}" type="audio/mpeg">
-    Your browser does not support the audio element.
-</audio>
+{{--<audio controls>--}}
+{{--    <source src="https://www.computerhope.com/jargon/m/example.mp3" />--}}
+{{--</audio>--}}
 
 <iframe src="{{ asset('assets/music/bangla.mp3') }}" allow="autoplay" style="display:none" id="iframeAudio">
 </iframe>
@@ -538,10 +537,10 @@
 
 <script>
 
-    document.body.addEventListener("mousemove", function () {
-        audio = document.getElementById('playAudio');
-        audio.play()
-    })
+    // document.body.addEventListener("mousemove", function () {
+    //     audio = document.getElementById('playAudio');
+    //     audio.play()
+    // })
 </script>
 </body>
 </html>

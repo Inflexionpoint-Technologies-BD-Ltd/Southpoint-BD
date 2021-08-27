@@ -208,6 +208,7 @@
                   border: 0px solid #ffcc00;
                   color: #000000;
                   width: 60%;
+                  box-shadow: 0 15px 20px rgba(0,0,0,0.30);
                   margin: auto;
                 "
                         border="0"
@@ -217,7 +218,7 @@
                         <tbody>
                         @foreach($services as $service)
                             <tr>
-                                <td>{{ $service->content }}</td>
+                                <td style="padding: 22px">{{ $service->content }}</td>
                             </tr>
                         @endforeach
                         </tbody>
@@ -261,6 +262,7 @@
                 background-color: #ef1a30;
                 display: inline-block;
                 padding: 2px 5px;
+                color: white;
               "
                     >
                         {{ $document->title }}

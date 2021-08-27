@@ -6812,8 +6812,8 @@ body.anim .slider-arrow-next-box {
     left: 6px;
     width: 16px;
     height: 16px;
-    border-bottom: 2px solid black;
-    border-left: 2px solid black;
+    border-bottom: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
@@ -6826,8 +6826,8 @@ body.anim .slider-arrow-next-box {
     left: auto;
     right: 6px;
     border: none;
-    border-top: 2px solid black;
-    border-right: 2px solid #585e63;
+    border-top: 2px solid #ffffff;
+    border-right: 2px solid #ffffff;
 }
 
 .swiper-button-prev:hover .slider-arrow-prev:before {
@@ -6889,14 +6889,14 @@ body.anim .slider-arrow-next-box {
 
 .about-slider .slider-arrow-prev:before,
 .about-slider .slider-arrow-next:before {
-    border-bottom: 2px solid #262626;
-    border-left: 2px solid #262626;
+    border-bottom: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
 }
 
 .about-slider .slider-arrow-next:before {
     border: none;
-    border-top: 2px solid #262626;
-    border-right: 2px solid #262626;
+    border-top: 2px solid #ffffff;
+    border-right: 2px solid #ffffff;
 }
 
 @media only screen and (max-width: 999px) {

@@ -111,12 +111,15 @@
                   >Contact Us</span
                   ><br/>
                         </h2>
-                        <h3 class="large-title-bold text-color-4" style="font-size: 30px; margin-top: 20px">
-                            <span class="overlay-loading2 overlay-light-bg-1 tr-delay04 text-color-1">Most Established Company</span><br>
+
+
+                        <h2 class="large-title-bold text-color-4" style="font-size: 37px; margin-top: 20px">
+                            <span
+                                class="overlay-loading2 overlay-light-bg-1 tr-delay04 text-color-1">Most Established Company</span><br>
                             <span
                                 class="overlay-loading2 overlay-light-bg-1 tr-delay05 text-color-1">For Human Resource Development</span><br>
                             <span class="overlay-loading2 overlay-light-bg-1 tr-delay06 text-color-1">& overseas employment</span>
-                        </h3>
+                        </h2>
                     </div>
                 </div>
                 <!-- column end -->
@@ -160,36 +163,48 @@
                     </div>
                     <!-- flex-container start -->
                     <div class="flex-container top-padding-90 contact-box">
-                        <iframe
-                            src="{{ $contact->map }}"
-                            width="600"
-                            height="450"
-                            style="border: 0; width: 100%"
-                            allowfullscreen=""
-                            loading="lazy"
-                        ></iframe>
+                        <div class="table-width-css-1">
+                            <iframe
+                                src="{{ $contact->map }}"
+                                width="600"
+                                height="450"
+                                style="border: 0; width: 100%"
+                                allowfullscreen=""
+                                loading="lazy"
+                            ></iframe>
+                        </div>
+
+                        <div class="table-width-css-2">
+                            <div>
+                                <div style="box-shadow: 0 15px 20px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.25); border: 0px solid black; display: inline-block; padding: 5px; border-radius: 10px" >
+                                    <img src="{{ asset('assets/images/qrcode/qr-1.png') }}" alt="" style="width: 190px; height: 190px">
+                                </div>
+                            </div>
+
+                            <div style="margin-top: 10px">
+                                <h3 class="small-text text-center">{{ $contact->place }}</h3>
+                                <div style="margin-top: 15px; text-align: center">
+                                    <span class="small-text">{{ $contact->address }}</span><br>
+                                    <span class="small-text">{{ $contact->tel }}</span><br>
+                                    <span class="small-text">{{ $contact->email }}</span><br>
+                                </div>
+                            </div>
+
+                        </div>
+
                     </div>
                     <!-- flex-container end -->
 
-                    <div style="margin-top: 10px">
-                        <h3 class="small-text text-center">{{ $contact->place }}</h3>
-                        <div style="text-align: center; margin-top: 15px">
-                            <span class="small-text text-center">{{ $contact->address }}</span><br>
-                            <span class="small-text text-center">{{ $contact->tel }}</span><br>
-                            <span class="small-text text-center">{{ $contact->email }}</span><br>
-                        </div>
-                    </div>
+                    {{--a                    <div style="padding: 10px; display: flex; justify-content: center">--}}
+                    {{--                        <div id="qrcode"></div>--}}
+                    {{--                    </div>--}}
 
-{{--a                    <div style="padding: 10px; display: flex; justify-content: center">--}}
-{{--                        <div id="qrcode"></div>--}}
-{{--                    </div>--}}
-
-{{--                    <script type="text/javascript">--}}
-{{--                        new QRCode(--}}
-{{--                            document.getElementById("qrcode"),--}}
-{{--                            "http://jindo.dev.naver.com/collie"--}}
-{{--                        );--}}
-{{--                    </script>--}}
+                    {{--                    <script type="text/javascript">--}}
+                    {{--                        new QRCode(--}}
+                    {{--                            document.getElementById("qrcode"),--}}
+                    {{--                            "http://jindo.dev.naver.com/collie"--}}
+                    {{--                        );--}}
+                    {{--                    </script>--}}
 
                 </div>
                 <!-- container end -->
@@ -228,12 +243,15 @@
                 <div class="content-left-right-margin-10 footer-left-mobile">
                     <h4>{{ $footer->title }}</h4> <br>
                     <ul class="footer-information">
-                        <li><i class="far fa-envelope"></i><a href="{{ $footer->email }}" class="xsmall-title-oswald" style="color: #0b0b0b">
+                        <li><i class="far fa-envelope"></i><a href="{{ $footer->email }}" class="xsmall-title-oswald"
+                                                              style="color: #0b0b0b">
                                 spoint@agni.com</a></li>
                         <li><i class="fas fa-mobile-alt"></i><a href="#"
-                                                                class="xsmall-title-oswald" style="color: black">{{ $footer->tel }}</a>
+                                                                class="xsmall-title-oswald"
+                                                                style="color: black">{{ $footer->tel }}</a>
                         </li>
-                        <li><i class="fas fa-map-marker-alt"></i><a href="#" class="xsmall-title-oswald text-height-17" style="color: black">{{ $footer->address }}</a>
+                        <li><i class="fas fa-map-marker-alt"></i><a href="#" class="xsmall-title-oswald text-height-17"
+                                                                    style="color: black">{{ $footer->address }}</a>
                         </li>
                     </ul>
                 </div>

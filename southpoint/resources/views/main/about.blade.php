@@ -17,6 +17,33 @@
     <link href="{{ asset('assets/css/about.css') }}" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
+
+    <style>
+        /* h1 {
+          font-size: 200px;
+          text-align: center;
+          margin: 0 auto;
+        } */
+        .blink {
+            animation: test 0.9s infinite alternate;
+            animation-timing-function: ease-in;
+        }
+        #dot1 {
+            animation-delay: 0.1s;
+        }
+        #dot3 {
+            animation-delay: 0.6s;
+        }
+
+        @keyframes test {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
     {{--  ----------------------------------------------- audio ------------------------------------  --}}
 
     <audio autoplay>
@@ -182,13 +209,13 @@
                 </style>
                 <!-- table style start -->
                 <div data-animation-container class="flex-container">
-                    <table style="border-collapse: collapse; border: 0px solid #FFCC00; color: #000000; width: 100%;"
+                    <table style="border-collapse: collapse; border: 0px solid #FFCC00; color: #000000; width: 100%; background-color: #E8E8E8"
                            border="0" cellspacing="2" cellpadding="3">
-                        <tbody>
+                        <tbody style=" box-shadow: 0 15px 20px rgba(0,0,0,0.30);">
                         @foreach($profiles as $profile)
-                            <tr>
-                                <td>{{ $profile->title }}</td>
-                                <td>: {{ $profile->content }}</td>
+                            <tr style="font-size: 12px; font-weight: 600">
+                                <td style="padding: 20px">{{ $profile->title }}</td>
+                                <td style="padding: 10px">{{ $profile->content }}</td>
                             </tr>
                         @endforeach
                         </tbody>
@@ -224,7 +251,7 @@
 
                     @foreach($clients as $client)
                         <button
-                            class="map-point" data-toggle="modal" data-target="#exampleModal" id="test"
+                            class="map-point" id=""
                             style="top: {{ $client->top ."%" }}; left: {{ $client->left ."%" }}; background-color: @if($client->status == "active") green @elseif($client->status == "hold") #c65102 @else red @endif"
                         >
                             <div class="content overflow-auto">
@@ -238,8 +265,6 @@
                                     @endforeach
                                 </div>
                             </div>
-
-
                         </button>
                     @endforeach
 

@@ -132,7 +132,7 @@
                     data-animation="overlay-anim2" style="color: #ef1a30;">{{ $infrastructure->title }}</h2><br>
                 <!-- <p data-animation-child class="tr-delay02 xsmall-title-oswald top-margin-5 title-fill" data-animation="title-fill-anim" data-text="We Offer Digital Solutions">We Offer Digital Solutions</p> -->
                 <p data-animation-child class="text-color-5 p-style-small fade-anim-box tr-delay04"
-                   data-animation="fade-anim" style="color: darkgrey;">{{ $infrastructure->content }}</p>
+                   data-animation="fade-anim" style="color: darkgrey; text-align: justify">{{ $infrastructure->content }}</p>
             </div><!-- container end -->
     @endforeach
 
