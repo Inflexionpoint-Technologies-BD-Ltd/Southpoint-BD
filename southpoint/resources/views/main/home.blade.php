@@ -386,7 +386,7 @@
         class="video-content-bg"
         width="560"
         height="315"
-        src="https://www.youtube.com/embed/9TGlc0Fufgk"
+        src="https://www.youtube.com/embed/6jRZ8vfhnCQ"
         title="YouTube video player"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
