@@ -108,13 +108,15 @@
                   <span
                       class="load-title-fill tr-delay03"
                       data-text="Contact Us"
+                      style="padding: 10px"
                   >Contact Us</span
                   ><br/>
                         </h2>
 
 
-                        <h2 class="large-title-bold text-color-4" style="font-size: 37px; margin-top: 20px">
+                        <h2 class="large-title-bold text-color-4" style="font-size: 37px; margin-top: 20px; background-color: white; padding: 10px">
                             <span
+                                style="padding: 5px"
                                 class="overlay-loading2 overlay-light-bg-1 tr-delay04 text-color-1">Most Established Company</span><br>
                             <span
                                 class="overlay-loading2 overlay-light-bg-1 tr-delay05 text-color-1">For Human Resource Development</span><br>
@@ -261,8 +263,7 @@
         <div class="twelve-columns">
             <a href="https://inflexionpointbd.com/" target="_blank">
 
-                <p class="p-letter-style text-color-4 footer-copyright">© COPYRIGHT 2021 INFLEXIONPOINT TECHNOLOGIES BD
-                    LTD</p>
+                <p class="p-letter-style text-color-4 footer-copyright">&copy; Copyright 2021.Designed and developed by InflexionPoint Technologies BD Ltd</p>
 
             </a>
         </div><!-- column end -->

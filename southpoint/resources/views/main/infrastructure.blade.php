@@ -99,7 +99,7 @@
                   >Infrastructure</span
                   ><br/>
                         </h2>
-                        <h3 class="large-title-bold text-color-4" style="font-size: 30px; margin-top: 20px">
+                        <h3 class="large-title-bold text-color-4" style="font-size: 30px; margin-top: 20px; background-color: #D6E6F6; padding: 10px">
                             <span class="overlay-loading2 overlay-light-bg-1 tr-delay04 text-color-1">Most Established Company</span><br>
                             <span
                                 class="overlay-loading2 overlay-light-bg-1 tr-delay05 text-color-1">For Human Resource Development</span><br>

@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-    <title>SouthPoint</title>
+    <title>SouthPoint BD</title>
 
     <!-- fonts -->
     <link
@@ -13,8 +13,13 @@
         type="text/css"
     />
 
+    {{-- ----------------- seo --------------------   --}}
 
-    <!-- styles -->
+    <meta name="Description" CONTENT="South Point Overseas Limited, as it stands out today as one of the most established companies in the field of Human Resource Development and overseas employment, has been in the business of recruitment, training, and placement of workers for overseas employment for over two decades since the formation of the Company.">
+
+    {{-- ------------------------------- end - seo    --}}
+
+<!-- styles -->
     <link href="{{asset('assets/css/plugins.css')}}" rel="stylesheet" type="text/css"/>
     <link href="{{asset('assets/css/index.css')}}" rel="stylesheet" type="text/css"/>
 </head>
@@ -92,10 +97,10 @@
                 <div class="swiper-slide flex-min-height-box home-slide">
                     <!-- slide-bg -->
                     <div
-                        class="slide-bg overlay-loading2 overlay-dark-bg-1"
+                        class="slide-bg overlay-loading2 overlay-dark-bg-1 box-sh"
                         style="
                             background-image: url({{ asset('storage/'.$image->image) }});
-                            "
+                            " id="box"
                     ></div>
                     <!-- home-slider-content start -->
                     <div
@@ -105,6 +110,13 @@
                 </div>
                 <!-- swiper-slide end -->
         @endforeach
+
+            <style>
+                .box-sh{
+                    box-shadow: inset 0px -90px 10px rgba(255,0,0,0.3);
+                }
+
+            </style>
         <!---------------- you should end for loop here without content ------------------------>
         </div>
         <!----------------------- swiper-wrapper end ------------------------------->
@@ -163,7 +175,6 @@
                       data-text="{{$about->title}}"
                   >{{$about->title}}</span
                   ><br/>
-                                <!-- <span data-animation-child class="title-fill tr-delay01" data-animation="title-fill-anim" data-text="We are Pro">We are Pro</span> -->
                             </h2>
                         </div>
                         <!-- column end -->
@@ -234,29 +245,28 @@
                 <div class="portfolio-content-inner flex-min-height-inner">
                     <!-- flex-container start -->
                     @foreach($messages as $message)
-                        <div class="flex-container container small">
+                        <div class="flex-container container small" id="flex-direction-mobile">
                             <!-- column start -->
                             <div data-animation-container class="six-columns">
                                 <div class="content-right-margin-40">
                                     <!-- <span class="small-title-oswald red-color overlay-anim-box2" data-animation="overlay-anim2">Commercial</span> -->
                                     <h3 class="title-style text-color-1">
-                      <span
-                          data-animation-child
-                          class="overlay-anim-box2 overlay-dark-bg-2 tr-delay01"
-                          data-animation="overlay-anim2"
-                      >Managing Director's Message</span
-                      ><br/>
-                                        <!-- <span data-animation-child class="overlay-anim-box2 overlay-dark-bg-2 tr-delay02" data-animation="overlay-anim2">pork belly lyft</span><br>
-                                                              <span data-animation-child class="overlay-anim-box2 overlay-dark-bg-2 tr-delay03" data-animation="overlay-anim2">brooklyn messeng</span> -->
+                                      <span
+                                          data-animation-child
+                                          class="overlay-anim-box2 overlay-dark-bg-2 tr-delay01"
+                                          data-animation="overlay-anim2"
+                                      >Managing Director's Message</span><br/>
+
                                     </h3>
+
                                     <p
                                         data-animation-child
                                         class="
-                        p-style-small
-                        text-color-2
-                        fade-anim-box
-                        tr-delay04
-                      "
+                                                p-style-small
+                                                text-color-2
+                                                fade-anim-box
+                                                tr-delay04
+                                               "
                                         style="white-space: break-spaces; text-align: justify"
                                         data-animation="fade-anim"
                                     >{{ \Illuminate\Support\Str::limit($message->message,400) }}</p>
@@ -264,11 +274,11 @@
                                     <div
                                         data-animation-child
                                         class="
-                        arrow-btn-box
-                        top-margin-30
-                        fade-anim-box
-                        tr-delay05
-                      "
+                                            arrow-btn-box
+                                            top-margin-30
+                                            fade-anim-box
+                                            tr-delay05
+                                            "
                                         data-animation="fade-anim"
                                     >
                                         <a
@@ -281,6 +291,9 @@
                             </div>
                             <!-- column end -->
                             <!-- column start -->
+
+                            {{-- -------------- managing directors message -------------------------   --}}
+
                             <div class="six-columns top-padding-60">
                                 <a
                                     href="{{ route('page.about') }}"
@@ -305,7 +318,10 @@
                                     ></div>
                                 </a>
                             </div>
-                            <!-- column end -->
+
+                        {{-- -------------- end - managing directors message --------------------   --}}
+
+                        <!-- column end -->
                         </div>
                 @endforeach
                 <!-- flex-container end -->
@@ -515,8 +531,7 @@
     <!-- column start -->
         <div class="twelve-columns">
             <p class="p-letter-style text-color-4 footer-copyright"><a href="https://inflexionpointbd.com/"
-                                                                       target="_blank">&copy; Copyright 2021
-                    InflexionPoint Technologies BD Ltd</a></p>
+                                                                       target="_blank">&copy; Copyright 2021.Designed and developed by InflexionPoint Technologies BD Ltd</a></p>
         </div><!-- column end -->
     </div><!-- flex-container end -->
 </footer><!-- footer end -->

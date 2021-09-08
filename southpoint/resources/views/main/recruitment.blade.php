@@ -61,7 +61,8 @@
         <a href="/" class="logo pointer-large animsition-link">
             <div class="logo-img-box">
                 <img class="logo-white" src="{{ asset('assets/images/logo/SP-Weblogo.png') }}" alt="logo">
-                <img class="logo-black" src="{{ asset('assets/images/logo/south_point_white.png') }}" alt="logo" style="width: 50px">
+                <img class="logo-black" src="{{ asset('assets/images/logo/south_point_white.png') }}" alt="logo"
+                     style="width: 50px">
             </div>
         </a><!-- logo end -->
 
@@ -96,9 +97,9 @@
         <!-- flex-min-height-inner start -->
         <div class="flex-min-height-inner">
             <!-- flex-container start -->
-                <div
-                    class="container top-bottom-padding-120 flex-container response-999"
-                >
+            <div
+                class="container top-bottom-padding-120 flex-container response-999"
+            >
                 <!-- column start -->
                 <div class="six-columns six-offset">
                     <div class="content-left-margin-40">
@@ -109,7 +110,8 @@
                   >Recruitment</span
                   ><br/>
                         </h2>
-                        <h3 class="large-title-bold text-color-4" style="font-size: 30px; margin-top: 20px">
+                        <h3 class="large-title-bold text-color-4"
+                            style="font-size: 30px; margin-top: 20px; background-color: #D6E6F6; padding: 10px">
                             <span class="overlay-loading2 overlay-light-bg-1 tr-delay04 text-color-1">Most Established Company</span><br>
                             <span
                                 class="overlay-loading2 overlay-light-bg-1 tr-delay05 text-color-1">For Human Resource Development</span><br>
@@ -119,18 +121,18 @@
                 </div>
                 <!-- column end -->
             </div>
-        <!-- flex-min-height-inner end -->
+            <!-- flex-min-height-inner end -->
 
-        <!-- scroll-btn start -->
-        <a href="#down" class="scroll-btn pointer-large">
-            <div class="scroll-arrow-box">
-                <span class="scroll-arrow"></span>
-            </div>
-            <div class="scroll-btn-flip-box">
-                <span class="scroll-btn-flip" data-text="Scroll">Scroll</span>
-            </div>
-        </a
-        ><!-- scroll-btn end -->
+            <!-- scroll-btn start -->
+            <a href="#down" class="scroll-btn pointer-large">
+                <div class="scroll-arrow-box">
+                    <span class="scroll-arrow"></span>
+                </div>
+                <div class="scroll-btn-flip-box">
+                    <span class="scroll-btn-flip" data-text="Scroll">Scroll</span>
+                </div>
+            </a
+            ><!-- scroll-btn end -->
     </section>
     <!-- page-head end -->
 
@@ -299,7 +301,7 @@
                                       portfolio-slider-overlay
                                     "
 
-                                    style="background-color : rgba(255,0,0,0.8); padding : 8px; color : white"
+                                      style="background-color : rgba(255,0,0,0.8); padding : 8px; color : white"
 
                                   >{{ $paper->content }}
                                   </span>
@@ -366,7 +368,8 @@
                         <li><i class="fas fa-mobile-alt"></i><a href="#"
                                                                 class="xsmall-title-oswald">{{ $footer->tel }}</a>
                         </li>
-                        <li><i class="fas fa-map-marker-alt"></i><a href="#" class="xsmall-title-oswald text-height-17">{{ $footer->address }}</a>
+                        <li><i class="fas fa-map-marker-alt"></i><a href="#"
+                                                                    class="xsmall-title-oswald text-height-17">{{ $footer->address }}</a>
                         </li>
                     </ul>
                 </div>
@@ -374,7 +377,8 @@
     @endforeach
     <!-- column start -->
         <div class="twelve-columns">
-            <p class="p-letter-style text-color-4 footer-copyright"><a href="https://inflexionpointbd.com/" target="_blank">&copy; Copyright 2021 InflexionPoint Technologies BD Ltd</a></p>
+            <p class="p-letter-style text-color-4 footer-copyright"><a href="https://inflexionpointbd.com/"
+                                                                       target="_blank">&copy; Copyright 2021.Designed and developed by InflexionPoint Technologies BD Ltd</a></p>
         </div><!-- column end -->
     </div><!-- flex-container end -->
 </footer><!-- footer end -->

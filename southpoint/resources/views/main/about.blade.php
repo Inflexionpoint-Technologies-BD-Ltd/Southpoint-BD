@@ -19,30 +19,7 @@
 
 
     <style>
-        /* h1 {
-          font-size: 200px;
-          text-align: center;
-          margin: 0 auto;
-        } */
-        .blink {
-            animation: test 0.9s infinite alternate;
-            animation-timing-function: ease-in;
-        }
-        #dot1 {
-            animation-delay: 0.1s;
-        }
-        #dot3 {
-            animation-delay: 0.6s;
-        }
 
-        @keyframes test {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
     </style>
     {{--  ----------------------------------------------- audio ------------------------------------  --}}
 
@@ -110,10 +87,12 @@
             <!-- flex-container start -->
             <div class="container top-bottom-padding-120 flex-container response-999">
                 <!-- column start -->
-                <div class="six-columns six-offset hide-content">
+                <div class="six-columns six-offset">
                     <div class="content-left-margin-40">
-                        <h2 class="overlay-loading2 tr-delay03 large-title red-color">About Us</h2>
-                        <h3 class="large-title-bold text-color-4" style="font-size: 30px; margin-top: 20px">
+                        <h2 class="overlay-loading2 tr-delay03 large-title red-color"
+                            style="background-color: #D6E6F6; padding: 10px">About Us</h2>
+                        <h3 class="large-title-bold text-color-4"
+                            style="font-size: 30px; margin-top: 20px; background-color: #D6E6F6; padding: 10px">
                             <span class="overlay-loading2 overlay-light-bg-1 tr-delay04 text-color-1">Most Established Company</span><br>
                             <span
                                 class="overlay-loading2 overlay-light-bg-1 tr-delay05 text-color-1">For Human Resource Development</span><br>
@@ -209,8 +188,9 @@
                 </style>
                 <!-- table style start -->
                 <div data-animation-container class="flex-container">
-                    <table style="border-collapse: collapse; border: 0px solid #FFCC00; color: #000000; width: 100%; background-color: #E8E8E8"
-                           border="0" cellspacing="2" cellpadding="3">
+                    <table
+                        style="border-collapse: collapse; border: 0px solid #FFCC00; color: #000000; width: 100%; background-color: #E8E8E8"
+                        border="0" cellspacing="2" cellpadding="3">
                         <tbody style=" box-shadow: 0 15px 20px rgba(0,0,0,0.30);">
                         @foreach($profiles as $profile)
                             <tr style="font-size: 12px; font-weight: 600">
@@ -251,11 +231,11 @@
 
                     @foreach($clients as $client)
                         <button
-                            class="map-point" id=""
+                            class="map-point"
                             style="top: {{ $client->top ."%" }}; left: {{ $client->left ."%" }}; background-color: @if($client->status == "active") green @elseif($client->status == "hold") #c65102 @else red @endif"
                         >
-                            <div class="content overflow-auto">
-                                <div class="centered-y">
+                            <div class="content" style="overflow: hidden; position: relative">
+                                <div class="centered-y" style="position: absolute; top :0; bottom: 0; left: 0; right: -17px; overflow-y: scroll;">
                                     <h2 style="font-size: 17px; text-align: center">{{ $client->title }}</h2>
                                     <hr>
                                     @foreach($client->area as $area)
@@ -266,6 +246,11 @@
                                 </div>
                             </div>
                         </button>
+
+                        <script>
+                            var objDiv = document.getElementById("divExample");
+                            objDiv.scrollTop = objDiv.scrollHeight;
+                        </script>
                     @endforeach
 
                     {{--  --------------------------- end - client list loop  --}}
@@ -320,8 +305,7 @@
         <div class="twelve-columns">
             <p class="p-letter-style text-color-4 footer-copyright"><a href="https://inflexionpointbd.com/"
                                                                        target="_blank" style="color: black">&copy;
-                    Copyright 2021
-                    InflexionPoint Technologies BD Ltd</a></p>
+                    Copyright 2021.Designed and developed by InflexionPoint Technologies BD Ltd</a></p>
         </div><!-- column end -->
     </div><!-- flex-container end -->
 </footer><!-- footer end -->

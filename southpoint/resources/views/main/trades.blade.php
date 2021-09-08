@@ -207,8 +207,7 @@
     <!-- column start -->
         <div class="twelve-columns">
         <p class="p-letter-style text-color-4 footer-copyright"><a href="https://inflexionpointbd.com/"
-                                                                       target="_blank" style="color: black">&copy; Copyright 2021
-                    InflexionPoint Technologies BD Ltd</a></p>
+                                                                       target="_blank" style="color: black">&copy; Copyright 2021.Designed and developed by InflexionPoint Technologies BD Ltd</a></p>
         </div><!-- column end -->
     </div><!-- flex-container end -->
 </footer><!-- footer end -->

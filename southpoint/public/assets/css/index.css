@@ -131,6 +131,10 @@ html {
     margin: 0;
 }
 
+/*.slider-bg {*/
+/*    background-position: initial;*/
+/*}*/
+
 body {
     font-size: 14px;
     -webkit-font-smoothing: antialiased;
@@ -5767,7 +5771,7 @@ button.mfp-close {
     left: 0;
     top: 0;
     background-size: cover;
-    background-position: center center;
+    background-position: center;
     background-repeat: no-repeat;
     z-index: 0;
 }
@@ -8308,6 +8312,10 @@ body.out .swiper-slide-active .portfolio-slider-fade {
 @media only screen and (max-width: 549px) {
     .content-margin-block {
         margin: 0 10px;
+    }
+
+    #flex-direction-mobile {
+        flex-direction: column-reverse;
     }
 
     .post-img-box {
