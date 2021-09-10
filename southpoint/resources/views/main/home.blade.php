@@ -113,7 +113,7 @@
 
             <style>
                 .box-sh{
-                    box-shadow: inset 0px -90px 10px rgba(255,0,0,0.3);
+                    box-shadow: inset 0px -100px 10px rgba(0,0,0,0.5);
                 }
 
             </style>

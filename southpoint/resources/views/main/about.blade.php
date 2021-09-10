@@ -235,22 +235,14 @@
                             style="top: {{ $client->top ."%" }}; left: {{ $client->left ."%" }}; background-color: @if($client->status == "active") green @elseif($client->status == "hold") #c65102 @else red @endif"
                         >
                             <div class="content" style="overflow: hidden; position: relative">
-                                <div class="centered-y" style="position: absolute; top :0; bottom: 0; left: 0; right: -17px; overflow-y: scroll;">
-                                    <h2 style="font-size: 17px; text-align: center">{{ $client->title }}</h2>
-                                    <hr>
-                                    @foreach($client->area as $area)
-                                        <li style="font-size: 12px; list-style: initial">
-                                            {{$area->area}}
-                                        </li>
-                                    @endforeach
+                                <div class="centered-y"
+                                     style="position: absolute; top :0; bottom: 0; left: 0; right: -17px; overflow-y: scroll;">
+                                    <a href="{{ route('page.profile',$client->id) }}"><h2
+                                            style="font-size: 17px; text-align: center; color: white"
+                                            id="client_country">{{ $client->title }}</h2></a>
                                 </div>
                             </div>
                         </button>
-
-                        <script>
-                            var objDiv = document.getElementById("divExample");
-                            objDiv.scrollTop = objDiv.scrollHeight;
-                        </script>
                     @endforeach
 
                     {{--  --------------------------- end - client list loop  --}}

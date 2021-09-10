@@ -39,7 +39,7 @@ class SliderController extends Controller
     {
         $inputs = \request()->validate([
             'content' => 'required',
-            'image' => 'required|mimes:jpeg,jpg,png',
+            'image' => 'required|mimes:jpeg,jpg,png,gif',
         ]);
 
         if (request('image')) {

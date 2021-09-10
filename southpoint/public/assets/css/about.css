@@ -9317,7 +9317,7 @@ a:active {
     /*top: 50%;*/
     /*transform: translateY(-50%);*/
     padding: 5px;
-    text-align: left;
+    text-align: center;
 }
 
 .distribution-map {
@@ -9338,8 +9338,8 @@ a:active {
     outline: none;
     z-index: 0;
     position: absolute;
-    width: 17px;
-    height: 17px;
+    width: 23px;
+    height: 23px;
     border-radius: 20px;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
     opacity: 0.8;
@@ -9377,8 +9377,8 @@ a:active {
     margin-top: 20px;
     filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
     opacity: 1;
-    width: 200px;
-    height: 150px;
+    width: 180px;
+    height: 40px;
     color: #e5e5e5;
     z-index: 1;
     transition: opacity 0.25s ease-in-out, width 0.25s ease-in-out,

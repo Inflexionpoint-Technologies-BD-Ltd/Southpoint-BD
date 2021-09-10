@@ -96,4 +96,15 @@ class MainController extends Controller
 
     // -----------------------------------------------------------------------------------------------  end - recruitment page
 
+    // ------------------------------------------------- profile -------------------------------------------------------------
+
+    public function profile($id){
+        $footers = Footer::limit(2)->get();
+        $client = Client::find($id);
+        return view('main.profile',compact('footers','client'));
+    }
+
+    // --------------------------------------------------------------------------------------------------------- end - profile
+
+
 }
